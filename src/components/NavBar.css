@@ -1,0 +1,328 @@
+/* src/components/NavBar.css */
+
+/* ─── Base navbar ─── */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 72px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  background: transparent;
+}
+
+/* Scrolled state – frosted glass */
+.navbar--scrolled {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 4px 16px rgba(0, 0, 0, 0.04);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Hidden on scroll-down */
+.navbar--hidden {
+  transform: translateY(-100%);
+}
+
+/* ─── Container ─── */
+.nav-container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+/* ─── Logo ─── */
+.nav-logo-link {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+}
+
+.nav-logo {
+  height: 52px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.nav-logo-link:hover .nav-logo {
+  transform: scale(1.05);
+}
+
+.nav-logo-text {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 800;
+  font-size: 1.25rem;
+  color: #1a1a2e;
+  letter-spacing: -0.02em;
+}
+
+.navbar:not(.navbar--scrolled) .nav-logo-text {
+  color: #fff;
+}
+
+.navbar:not(.navbar--scrolled) .nav-logo {
+  filter: brightness(0) invert(1);
+}
+
+/* ─── Desktop nav links ─── */
+.nav-menu {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 500;
+  font-size: 0.925rem;
+  color: #1a1a2e;
+  text-decoration: none;
+  position: relative;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  display: inline-block;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.navbar:not(.navbar--scrolled) .nav-link {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.nav-link:hover {
+  color: #E36A2E;
+  background: rgba(227, 106, 46, 0.06);
+}
+
+.navbar:not(.navbar--scrolled) .nav-link:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.nav-link--active {
+  color: #E36A2E;
+}
+
+.navbar:not(.navbar--scrolled) .nav-link--active {
+  color: #fff;
+}
+
+/* Animated underline indicator */
+.nav-link__indicator {
+  position: absolute;
+  left: 1rem;
+  right: 1rem;
+  bottom: 2px;
+  height: 2.5px;
+  background: #E36A2E;
+  border-radius: 2px;
+}
+
+.navbar:not(.navbar--scrolled) .nav-link__indicator {
+  background: #fff;
+}
+
+/* ─── Right side ─── */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* CTA button */
+.nav-cta {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.6rem 1.4rem;
+  background: linear-gradient(135deg, #E36A2E, #d45a1e);
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 8px rgba(227, 106, 46, 0.3);
+}
+
+.nav-cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(227, 106, 46, 0.4);
+}
+
+.nav-cta:active {
+  transform: translateY(0);
+}
+
+.nav-cta__icon {
+  display: flex;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+
+.nav-cta:hover .nav-cta__icon {
+  transform: translateX(3px);
+}
+
+/* ─── Hamburger ─── */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  gap: 5px;
+  transition: background 0.2s ease;
+}
+
+.nav-hamburger:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.navbar:not(.navbar--scrolled) .nav-hamburger:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.nav-hamburger span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: #1a1a2e;
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease, width 0.3s ease;
+}
+
+.navbar:not(.navbar--scrolled) .nav-hamburger span {
+  background: #fff;
+}
+
+/* Hamburger animation */
+.nav-hamburger--open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.nav-hamburger--open span:nth-child(2) {
+  opacity: 0;
+  width: 0;
+}
+.nav-hamburger--open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ─── Mobile menu ─── */
+.nav-mobile {
+  position: absolute;
+  top: 72px;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.nav-mobile__links {
+  list-style: none;
+  margin: 0;
+  padding: 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.nav-mobile__link {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 500;
+  font-size: 1.05rem;
+  color: #1a1a2e;
+  text-decoration: none;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  display: block;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.nav-mobile__link:hover {
+  background: rgba(227, 106, 46, 0.06);
+  color: #E36A2E;
+}
+
+.nav-mobile__link--active {
+  color: #E36A2E;
+  background: rgba(227, 106, 46, 0.08);
+  font-weight: 600;
+}
+
+.nav-mobile__cta {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.85rem 1.5rem;
+  background: linear-gradient(135deg, #E36A2E, #d45a1e);
+  border-radius: 50px;
+  display: inline-block;
+  text-align: center;
+  margin-top: 0.75rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 8px rgba(227, 106, 46, 0.3);
+}
+
+.nav-mobile__cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(227, 106, 46, 0.4);
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 900px) {
+  .nav-menu {
+    display: none;
+  }
+
+  .nav-hamburger {
+    display: flex;
+  }
+
+  .nav-cta {
+    display: none;
+  }
+
+  .nav-container {
+    padding: 0 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-logo-text {
+    font-size: 1.1rem;
+  }
+
+  .nav-mobile__links {
+    padding: 1.25rem 1.25rem;
+  }
+}

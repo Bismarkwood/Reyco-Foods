@@ -1,0 +1,118 @@
+/* src/components/MarqueeBanner.css */
+
+/* ─── Marquee Banner ─── */
+.marquee-banner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: transparent;
+  height: 140px;
+  z-index: 20;
+  margin-top: -70px;
+  margin-bottom: -70px;
+}
+
+/* ─── Strip (shared) ─── */
+.marquee-banner__strip {
+  position: absolute;
+  left: 50%;
+  width: 120%;
+  overflow: hidden;
+  padding: 1.1rem 0;
+  transform-origin: center center;
+}
+
+/* Orange strip — rotates one way */
+.marquee-banner__strip--orange {
+  background: #E36A2E;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-3deg);
+}
+
+/* Blue strip — rotates the other way, crosses at center */
+.marquee-banner__strip--blue {
+  background: #244A6F;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(3deg);
+}
+
+/* ─── Track ─── */
+.marquee-banner__track {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  white-space: nowrap;
+  width: max-content;
+  animation: marqueeLeft 20s linear infinite;
+}
+
+.marquee-banner__track--reverse {
+  animation: marqueeRight 24s linear infinite;
+}
+
+@keyframes marqueeLeft {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marqueeRight {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+/* ─── Items ─── */
+.marquee-banner__item {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 800;
+  font-size: 1.4rem;
+  color: #fff;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.marquee-banner__dot {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 768px) {
+  .marquee-banner {
+    height: 100px;
+    margin-top: -50px;
+    margin-bottom: -50px;
+  }
+
+  .marquee-banner__item {
+    font-size: 0.9rem;
+  }
+
+  .marquee-banner__strip {
+    padding: 0.7rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .marquee-banner {
+    height: 80px;
+    margin-top: -40px;
+    margin-bottom: -40px;
+  }
+
+  .marquee-banner__item {
+    font-size: 0.72rem;
+  }
+
+  .marquee-banner__strip {
+    padding: 0.55rem 0;
+  }
+
+  .marquee-banner__track {
+    gap: 1.5rem;
+  }
+}

@@ -1,0 +1,320 @@
+/* src/components/CTABanner.css */
+
+/* ─── Section — full viewport ─── */
+.cta-banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #0a0a0a;
+}
+
+/* ─── Background — grocery/FMCG retail ─── */
+.cta-banner__bg {
+  position: absolute;
+  inset: -15% 0;
+  background-image: url("https://images.unsplash.com/photo-1604719312566-8912e9227c6a?auto=format&fit=crop&w=1920&q=80");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  will-change: transform;
+}
+
+/* Overlay — cinematic dark with warm tone */
+.cta-banner__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(8, 10, 18, 0.74) 0%,
+    rgba(15, 20, 32, 0.65) 40%,
+    rgba(10, 12, 20, 0.72) 70%,
+    rgba(8, 8, 14, 0.85) 100%
+  );
+  z-index: 1;
+}
+
+/* Grain */
+.cta-banner__grain {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  opacity: 0.03;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+}
+
+/* Vignette */
+.cta-banner__vignette {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 35%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+}
+
+/* ─── Floating Background Words ─── */
+.cta-banner__float-words {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.cta-banner__float-word {
+  position: absolute;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.025);
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  white-space: nowrap;
+}
+
+.cta-banner__float-word--1 { top: 15%; left: 5%; }
+.cta-banner__float-word--2 { top: 30%; right: 8%; }
+.cta-banner__float-word--3 { bottom: 35%; left: 7%; }
+.cta-banner__float-word--4 { top: 55%; right: 5%; }
+.cta-banner__float-word--5 { bottom: 20%; left: 12%; }
+.cta-banner__float-word--6 { bottom: 12%; right: 10%; }
+
+/* ─── Content ─── */
+.cta-banner__content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  max-width: 680px;
+  padding: 4rem 2rem;
+}
+
+/* ─── Label with lines ─── */
+.cta-banner__label-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-bottom: 3rem;
+}
+
+.cta-banner__label {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.55);
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.cta-banner__label-line {
+  display: block;
+  width: 60px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.2);
+  transform-origin: center;
+}
+
+/* ─── Heading ─── */
+.cta-banner__heading {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  color: #fff;
+  margin: 0 0 1.75rem;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.cta-banner__heading-italic {
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 400;
+}
+
+/* ─── Supporting text ─── */
+.cta-banner__text {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.85;
+  margin: 0 0 3rem;
+}
+
+/* ─── Form ─── */
+.cta-banner__form {
+  display: flex;
+  align-items: flex-end;
+  gap: 2rem;
+  max-width: 520px;
+  margin: 0 auto 3rem;
+}
+
+.cta-banner__input-wrap {
+  flex: 1;
+  position: relative;
+}
+
+.cta-banner__input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #fff;
+  padding: 0.6rem 0;
+  letter-spacing: 0.01em;
+}
+
+.cta-banner__input::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.cta-banner__input-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1.5px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), #E36A2E, rgba(255, 255, 255, 0.1));
+  transform-origin: center;
+}
+
+/* Orange dot on focus */
+.cta-banner__input-dot {
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #E36A2E;
+  opacity: 0;
+  transition: opacity 0.3s ease, left 0.6s ease;
+  box-shadow: 0 0 8px rgba(227, 106, 46, 0.5);
+}
+
+.cta-banner__input:focus ~ .cta-banner__input-dot {
+  opacity: 1;
+  left: 50%;
+}
+
+/* Button */
+.cta-banner__btn {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: #E36A2E;
+  white-space: nowrap;
+  padding: 0.6rem 0;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.cta-banner__btn::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #E36A2E;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.cta-banner__btn:hover {
+  color: #fff;
+}
+
+.cta-banner__btn:hover::after {
+  opacity: 0.4;
+}
+
+.cta-banner__btn-text {
+  position: relative;
+}
+
+.cta-banner__btn-arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+  font-size: 1.1rem;
+}
+
+.cta-banner__btn:hover .cta-banner__btn-arrow {
+  transform: translateX(6px);
+}
+
+/* ─── Trust micro text ─── */
+.cta-banner__micro {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 400;
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.22);
+  letter-spacing: 0.1em;
+  margin: 0;
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 768px) {
+  .cta-banner {
+    min-height: 600px;
+    height: auto;
+    padding: 6rem 0;
+  }
+
+  .cta-banner__content {
+    padding: 3rem 1.5rem;
+  }
+
+  .cta-banner__form {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.5rem;
+  }
+
+  .cta-banner__btn {
+    justify-content: center;
+  }
+
+  .cta-banner__label-line {
+    width: 35px;
+  }
+
+  .cta-banner__float-words {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .cta-banner__heading {
+    font-size: 1.75rem;
+  }
+
+  .cta-banner__text {
+    font-size: 0.9rem;
+  }
+
+  .cta-banner__label {
+    font-size: 0.65rem;
+  }
+}

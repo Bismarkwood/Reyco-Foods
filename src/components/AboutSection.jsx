@@ -1,0 +1,176 @@
+// src/components/AboutSection.jsx
+import React, { useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import "./AboutSection.css";
+
+const cineEase = [0.25, 0.46, 0.45, 0.94];
+
+const fadeUp = (delay = 0) => ({
+  hidden: { opacity: 0, y: 40 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.9, delay, ease: cineEase },
+  },
+});
+
+// Cards: content card followed by image card, alternating
+const carouselItems = [
+  {
+    type: "content",
+    title: "Retail Placement",
+    quote: "We help brands secure stronger visibility across relevant retail outlets, ensuring products reach consumers where they shop.",
+    color: "#244A6F",
+  },
+  {
+    type: "image",
+    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=600&q=85",
+    alt: "Neatly arranged household cleaning products on shelf",
+  },
+  {
+    type: "content",
+    title: "Reliable Distribution",
+    quote: "Our distribution capability supports smooth product movement from source to shelf, maintaining availability across retail channels.",
+    color: "#E36A2E",
+  },
+  {
+    type: "image",
+    image: "https://images.unsplash.com/photo-1625772299848-391b6a87d7b3?auto=format&fit=crop&w=600&q=85",
+    alt: "Stacked cardboard boxes ready for distribution",
+  },
+  {
+    type: "content",
+    title: "Market Activation",
+    quote: "We support brands with merchandising, in-store promotions, and campaigns that increase awareness and drive consumer engagement.",
+    color: "#1a1a2e",
+  },
+  {
+    type: "image",
+    image: "https://images.unsplash.com/photo-1631729371254-42c2892f0e6e?auto=format&fit=crop&w=600&q=85",
+    alt: "Colorful beverage bottles lined up on display",
+  },
+  {
+    type: "content",
+    title: "Product Categories",
+    quote: "Household products, toiletries, food, and beverages — the core categories we source, position, and distribute across Ghana.",
+    color: "#244A6F",
+  },
+  {
+    type: "image",
+    image: "https://images.unsplash.com/photo-1612817288484-6f916006741a?auto=format&fit=crop&w=600&q=85",
+    alt: "Toiletries and personal care products on shelf",
+  },
+  {
+    type: "content",
+    title: "Supply Chain Excellence",
+    quote: "End-to-end supply chain management ensuring products move efficiently from manufacturers to retail shelves without disruption.",
+    color: "#E36A2E",
+  },
+  {
+    type: "image",
+    image: "https://images.unsplash.com/photo-1604480132736-44c188fe4d20?auto=format&fit=crop&w=600&q=85",
+    alt: "Packaged food products and snacks on retail display",
+  },
+  {
+    type: "content",
+    title: "Brand Partnerships",
+    quote: "We build lasting partnerships with leading FMCG brands, becoming their trusted distribution arm in the Ghanaian market.",
+    color: "#1a1a2e",
+  },
+  {
+    type: "image",
+    image: "https://images.unsplash.com/photo-1583947215259-38e31be8751f?auto=format&fit=crop&w=600&q=85",
+    alt: "Detergent and cleaning supplies neatly displayed",
+  },
+  {
+    type: "content",
+    title: "Market Intelligence",
+    quote: "Data-driven insights on consumer behaviour, retail trends, and market gaps help our partners make smarter distribution decisions.",
+    color: "#244A6F",
+  },
+  {
+    type: "image",
+    image: "https://images.unsplash.com/photo-1601598851547-4302969d0614?auto=format&fit=crop&w=600&q=85",
+    alt: "Cereal boxes and breakfast products on supermarket shelf",
+  },
+  {
+    type: "content",
+    title: "Nationwide Coverage",
+    quote: "From Accra to Kumasi and beyond, our distribution network ensures consistent product availability across Ghana's key retail zones.",
+    color: "#E36A2E",
+  },
+  {
+    type: "image",
+    image: "https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?auto=format&fit=crop&w=600&q=85",
+    alt: "Fresh fruits and packaged food products display",
+  },
+];
+
+export default function AboutSection() {
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: true, margin: "-80px" });
+
+  // Duplicate items for seamless infinite loop
+  const loopItems = [...carouselItems, ...carouselItems];
+
+  return (
+    <section className="about" id="about" ref={sectionRef}>
+      {/* Background elements */}
+      <div className="about__bg-accent" />
+      <div className="about__bg-grid" />
+
+      {/* Section header */}
+      <motion.div
+        className="about__header"
+        variants={fadeUp(0)}
+        initial="hidden"
+        animate={isInView ? "visible" : "hidden"}
+      >
+        <span className="about__tag">ABOUT RITESTOCK</span>
+        <h2 className="about__title">
+          Connecting Products to<br />
+          <span className="about__title-accent">Ghana's Retail Market</span>
+        </h2>
+        <div className="about__title-line" />
+        <p className="about__intro">
+          Ritestock is a results-driven FMCG sourcing and distribution company
+          helping brands, producers, and retailers move high-demand consumer
+          goods efficiently across Ghana's retail channels.
+        </p>
+      </motion.div>
+
+      {/* Infinite scrolling carousel */}
+      <div className="about__carousel-wrap">
+        <div className="about__carousel-track">
+          {loopItems.map((item, i) =>
+            item.type === "content" ? (
+              <div
+                key={`${item.title}-${i}`}
+                className="about__carousel-card about__carousel-card--content"
+                style={{ "--card-color": item.color }}
+              >
+                <div className="about__carousel-content-inner">
+                  <h3 className="about__carousel-title">{item.title}</h3>
+                  <p className="about__carousel-quote">"{item.quote}"</p>
+                  <div className="about__carousel-line" />
+                </div>
+              </div>
+            ) : (
+              <div
+                key={`img-${i}`}
+                className="about__carousel-card about__carousel-card--image"
+              >
+                <img
+                  src={item.image}
+                  alt={item.alt}
+                  className="about__carousel-img"
+                  loading="lazy"
+                />
+              </div>
+            )
+          )}
+        </div>
+      </div>
+    </section>
+  );
+}

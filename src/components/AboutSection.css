@@ -1,0 +1,283 @@
+/* src/components/AboutSection.css */
+
+/* ─── Section ─── */
+.about {
+  position: relative;
+  padding: 9rem 0 7rem;
+  background: #fafafa;
+  overflow: hidden;
+}
+
+/* Background accent shape */
+.about__bg-accent {
+  position: absolute;
+  top: -200px;
+  right: -150px;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(227, 106, 46, 0.04) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Subtle grid pattern */
+.about__bg-grid {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.025;
+  background-image:
+    linear-gradient(rgba(36, 74, 111, 0.3) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(36, 74, 111, 0.3) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* ─── Header ─── */
+.about__header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 4rem;
+  padding: 0 2rem;
+}
+
+.about__tag {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 800;
+  font-size: 0.7rem;
+  color: #244A6F;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.about__tag::before,
+.about__tag::after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: #E36A2E;
+  border-radius: 1px;
+}
+
+.about__title {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 800;
+  font-size: clamp(2.25rem, 5vw, 3.25rem);
+  color: #1a1a2e;
+  margin: 0 0 1.5rem;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+}
+
+.about__title-accent {
+  color: #244A6F;
+}
+
+.about__title-line {
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #E36A2E, #244A6F);
+  border-radius: 2px;
+  margin: 0 auto 2rem;
+}
+
+.about__intro {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 400;
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.85;
+  margin: 0;
+}
+
+/* ─── Carousel Wrapper ─── */
+.about__carousel-wrap {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* ─── Infinite Scroll Track ─── */
+.about__carousel-track {
+  display: flex;
+  gap: 0;
+  animation: carouselScroll 60s linear infinite;
+  width: max-content;
+}
+
+.about__carousel-wrap:hover .about__carousel-track {
+  animation-play-state: paused;
+}
+
+@keyframes carouselScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* ─── Carousel Card (shared) ─── */
+.about__carousel-card {
+  flex: 0 0 380px;
+  height: 520px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* ─── Content Card ─── */
+.about__carousel-card--content {
+  background: var(--card-color, #244A6F);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2.5rem;
+  position: relative;
+}
+
+/* Decorative circles */
+.about__carousel-card--content::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -30%;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.03);
+  pointer-events: none;
+}
+
+.about__carousel-card--content::after {
+  content: "";
+  position: absolute;
+  bottom: -40%;
+  left: -20%;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.02);
+  pointer-events: none;
+}
+
+.about__carousel-content-inner {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.about__carousel-title {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: #fff;
+  margin: 0;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+.about__carousel-quote {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 400;
+  font-size: 0.92rem;
+  color: rgba(255, 255, 255, 0.78);
+  margin: 0;
+  line-height: 1.8;
+  font-style: italic;
+}
+
+.about__carousel-line {
+  width: 36px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+  margin-top: 0.25rem;
+  transition: width 0.4s ease, background 0.4s ease;
+}
+
+.about__carousel-card--content:hover .about__carousel-line {
+  width: 56px;
+  background: #E36A2E;
+}
+
+/* ─── Image Card ─── */
+.about__carousel-card--image {
+  background: #111;
+}
+
+.about__carousel-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.about__carousel-card--image:hover .about__carousel-img {
+  transform: scale(1.06);
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 900px) {
+  .about__carousel-card {
+    flex: 0 0 300px;
+    height: 440px;
+  }
+
+  .about__carousel-card--content {
+    padding: 2.5rem 2rem;
+  }
+
+  .about__carousel-title {
+    font-size: 1.35rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .about {
+    padding: 5rem 0 4rem;
+  }
+
+  .about__header {
+    padding: 0 1.25rem;
+  }
+
+  .about__carousel-card {
+    flex: 0 0 260px;
+    height: 380px;
+  }
+
+  .about__carousel-card--content {
+    padding: 2rem 1.5rem;
+  }
+
+  .about__carousel-title {
+    font-size: 1.2rem;
+  }
+
+  .about__carousel-quote {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .about__carousel-card {
+    flex: 0 0 240px;
+    height: 340px;
+  }
+
+  .about__carousel-card--content {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .about__carousel-title {
+    font-size: 1.1rem;
+  }
+}
