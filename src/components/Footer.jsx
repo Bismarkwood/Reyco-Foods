@@ -25,15 +25,30 @@ const fadeIn = (delay = 0) => ({
 const linkColumns = [
   {
     title: "Company",
-    links: ["Home", "About", "Our Services", "Products", "Contact"],
+    links: [
+      { label: "Home", href: "#home" },
+      { label: "About", href: "#about" },
+      { label: "Our Services", href: "#service" },
+      { label: "Products", href: "#products" },
+      { label: "Contact", href: "#contact" },
+    ],
   },
   {
     title: "Services",
-    links: ["Retail Placement", "Distribution", "Marketing Activation", "Product Sourcing"],
+    links: [
+      { label: "Retail Placement", href: "#service" },
+      { label: "Distribution", href: "#service" },
+      { label: "Marketing Activation", href: "#service" },
+      { label: "Product Sourcing", href: "#service" },
+    ],
   },
   {
     title: "Product Categories",
-    links: ["Household Products", "Toiletries", "Food & Beverages"],
+    links: [
+      { label: "Household Products", href: "#products" },
+      { label: "Toiletries", href: "#products" },
+      { label: "Food & Beverages", href: "#products" },
+    ],
   },
 ];
 
@@ -45,27 +60,28 @@ export default function Footer() {
     <div className="footer-wrapper">
       <footer className="footer" ref={footerRef}>
         {/* Background layers */}
-        <div className="footer__bg-glow footer__bg-glow--1" />
-        <div className="footer__bg-glow footer__bg-glow--2" />
+        <div className="footer__bg-glow footer__bg-glow--blue" />
+        <div className="footer__bg-glow footer__bg-glow--orange" />
+        <div className="footer__bg-grid" />
         <div className="footer__grain" />
 
-        {/* Ghost marquee behind everything */}
+        {/* Ghost marquee */}
         <div className="footer__ghost-marquee">
           <div className="footer__ghost-track">
-            <span className="footer__ghost-text">RITESTOCK</span>
+            <span className="footer__ghost-text">RITESTOCK LTD</span>
             <span className="footer__ghost-dot">·</span>
-            <span className="footer__ghost-text">RITESTOCK</span>
+            <span className="footer__ghost-text">RITESTOCK LTD</span>
             <span className="footer__ghost-dot">·</span>
-            <span className="footer__ghost-text">RITESTOCK</span>
+            <span className="footer__ghost-text">RITESTOCK LTD</span>
             <span className="footer__ghost-dot">·</span>
-            <span className="footer__ghost-text">RITESTOCK</span>
+            <span className="footer__ghost-text">RITESTOCK LTD</span>
             <span className="footer__ghost-dot">·</span>
           </div>
         </div>
 
-        {/* Main content */}
+        {/* Inner content */}
         <div className="footer__inner">
-          {/* Top section — CTA left + Columns right */}
+          {/* Top section */}
           <div className="footer__top">
             {/* Left CTA */}
             <motion.div
@@ -74,6 +90,12 @@ export default function Footer() {
               initial="hidden"
               animate={isInView ? "visible" : "hidden"}
             >
+              {/* Brand label */}
+              <div className="footer__brand-label">
+                <img src="/logo.png" alt="RiteStock" className="footer__mini-logo" />
+                <span className="footer__brand-tag">FMCG SOURCING &amp; DISTRIBUTION — GHANA</span>
+              </div>
+
               <h3 className="footer__cta-heading">Let's move your products.</h3>
               <p className="footer__cta-sub">
                 Connect with Ritestock for sourcing, retail placement,
@@ -95,17 +117,24 @@ export default function Footer() {
                 </button>
               </form>
 
+              <p className="footer__input-helper">
+                For distribution, retail placement, and brand activation enquiries.
+              </p>
+
               {/* Quick contact pills */}
               <div className="footer__pills">
                 <a href="tel:+233549729851" className="footer__pill">
+                  <span className="footer__pill-dot" />
                   +233 549 729 851
                   <span className="footer__pill-arrow">↗</span>
                 </a>
                 <a href="https://www.ritestock.com" className="footer__pill">
+                  <span className="footer__pill-dot" />
                   www.ritestock.com
                   <span className="footer__pill-arrow">↗</span>
                 </a>
                 <a href="#contact" className="footer__pill">
+                  <span className="footer__pill-dot" />
                   Contact Form
                   <span className="footer__pill-arrow">↗</span>
                 </a>
@@ -125,8 +154,11 @@ export default function Footer() {
                   <h4 className="footer__col-title">{col.title}</h4>
                   <ul className="footer__col-list">
                     {col.links.map((link) => (
-                      <li key={link}>
-                        <a href="#" className="footer__col-link">{link}</a>
+                      <li key={link.label}>
+                        <a href={link.href} className="footer__col-link">
+                          <span className="footer__col-link-arrow">→</span>
+                          {link.label}
+                        </a>
                       </li>
                     ))}
                   </ul>
@@ -159,14 +191,54 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Massive brand text */}
+          {/* Source to Shelf badge */}
           <motion.div
-            className="footer__brand-text-wrap"
-            variants={fadeUp(0.7)}
+            className="footer__badge-wrap"
+            variants={fadeIn(0.8)}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
           >
-            <h2 className="footer__brand-text">RITESTOCK</h2>
+            <span className="footer__badge">SOURCE TO SHELF</span>
+          </motion.div>
+
+          {/* Subtle category ticker */}
+          <div className="footer__ticker">
+            <div className="footer__ticker-track">
+              <span className="footer__ticker-item">Household Products</span>
+              <span className="footer__ticker-sep">·</span>
+              <span className="footer__ticker-item">Toiletries</span>
+              <span className="footer__ticker-sep">·</span>
+              <span className="footer__ticker-item">Food &amp; Beverages</span>
+              <span className="footer__ticker-sep">·</span>
+              <span className="footer__ticker-item">Retail Placement</span>
+              <span className="footer__ticker-sep">·</span>
+              <span className="footer__ticker-item">Distribution</span>
+              <span className="footer__ticker-sep">·</span>
+              <span className="footer__ticker-item">Marketing Activation</span>
+              <span className="footer__ticker-sep">·</span>
+              <span className="footer__ticker-item">Household Products</span>
+              <span className="footer__ticker-sep">·</span>
+              <span className="footer__ticker-item">Toiletries</span>
+              <span className="footer__ticker-sep">·</span>
+              <span className="footer__ticker-item">Food &amp; Beverages</span>
+              <span className="footer__ticker-sep">·</span>
+              <span className="footer__ticker-item">Retail Placement</span>
+              <span className="footer__ticker-sep">·</span>
+              <span className="footer__ticker-item">Distribution</span>
+              <span className="footer__ticker-sep">·</span>
+              <span className="footer__ticker-item">Marketing Activation</span>
+              <span className="footer__ticker-sep">·</span>
+            </div>
+          </div>
+
+          {/* Massive brand text */}
+          <motion.div
+            className="footer__brand-text-wrap"
+            variants={fadeUp(0.9)}
+            initial="hidden"
+            animate={isInView ? "visible" : "hidden"}
+          >
+            <h2 className="footer__brand-text">RITESTOCK LTD</h2>
           </motion.div>
 
           {/* Divider */}
@@ -174,13 +246,13 @@ export default function Footer() {
             className="footer__divider"
             initial={{ scaleX: 0 }}
             animate={isInView ? { scaleX: 1 } : { scaleX: 0 }}
-            transition={{ duration: 0.8, delay: 0.9, ease: cineEase }}
+            transition={{ duration: 0.8, delay: 1.0, ease: cineEase }}
           />
 
           {/* Bottom bar */}
           <motion.div
             className="footer__bottom"
-            variants={fadeIn(1.0)}
+            variants={fadeIn(1.1)}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
           >
@@ -190,6 +262,11 @@ export default function Footer() {
             <span className="footer__bottom-tag">
               FMCG Sourcing &amp; Distribution — Ghana
             </span>
+            <div className="footer__bottom-links">
+              <a href="#" className="footer__bottom-link">Privacy Policy</a>
+              <span className="footer__bottom-sep">·</span>
+              <a href="#" className="footer__bottom-link">Terms</a>
+            </div>
           </motion.div>
         </div>
       </footer>
