@@ -21,7 +21,7 @@ const carouselItems = [
     type: "content",
     title: "Salted Pig Feet in Brine",
     quote: "Ryeco Foods produces and exports high-quality Salted Pig Feet in Brine — made for hot climates with no refrigeration needed. Green-top lid with a shelf life of up to 18 months.",
-    color: "#244A6F",
+    color: "#1f6b3b",
   },
   {
     type: "image",
@@ -45,7 +45,7 @@ const carouselItems = [
     type: "content",
     title: "Frozen Beef & Mutton",
     quote: "Our frozen beef and mutton range includes beef cuts, beef feet, beef sinews, beef neck, and beef liver — export-grade and cold-chain certified.",
-    color: "#1a1a2e",
+    color: "#123f28",
   },
   {
     type: "image",
@@ -57,7 +57,7 @@ const carouselItems = [
     type: "content",
     title: "Frozen Chicken",
     quote: "We supply frozen chicken quarters, chicken legs, and whole chicken — reliably sourced and delivered across Africa with full cold-chain integrity.",
-    color: "#244A6F",
+    color: "#1f6b3b",
   },
   {
     type: "image",
@@ -81,7 +81,7 @@ const carouselItems = [
     type: "content",
     title: "Poultry — Turkey",
     quote: "Whole turkey, turkey legs, and turkey products exported frozen — consistently available and trusted by buyers across the African continent.",
-    color: "#1a1a2e",
+    color: "#123f28",
   },
   {
     type: "image",
@@ -93,7 +93,7 @@ const carouselItems = [
     type: "content",
     title: "Cold Chain Logistics",
     quote: "End-to-end cold chain management ensures every frozen product — from pork to poultry to offal — arrives at its African destination in perfect condition.",
-    color: "#244A6F",
+    color: "#1f6b3b",
   },
   {
     type: "image",

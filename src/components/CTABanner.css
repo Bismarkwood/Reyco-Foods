@@ -10,7 +10,7 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background: #0a0a0a;
+  background: #0b2f1e;
 }
 
 /* ─── Background — grocery/FMCG retail ─── */
@@ -58,7 +58,7 @@
   background: radial-gradient(
     ellipse at center,
     transparent 35%,
-    rgba(0, 0, 0, 0.5) 100%
+    rgba(8, 45, 27, 0.54) 100%
   );
 }
 

@@ -36,7 +36,7 @@
 
 /* Blue strip — rotates the other way, crosses at center */
 .marquee-banner__strip--blue {
-  background: #244A6F;
+  background: #1f6b3b;
   top: 50%;
   transform: translate(-50%, -50%) rotate(3deg);
 }

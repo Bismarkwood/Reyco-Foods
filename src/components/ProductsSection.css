@@ -29,7 +29,7 @@
   height: 400px;
   bottom: -80px;
   left: -80px;
-  background: radial-gradient(circle, rgba(36, 74, 111, 0.06) 0%, transparent 65%);
+  background: radial-gradient(circle, rgba(31, 107, 59, 0.08) 0%, transparent 65%);
   animation: shapeFloat 16s ease-in-out infinite 3s;
 }
 
@@ -54,7 +54,7 @@
   inset: 0;
   pointer-events: none;
   opacity: 0.03;
-  background-image: radial-gradient(circle, #244A6F 1px, transparent 1px);
+  background-image: radial-gradient(circle, #1f6b3b 1px, transparent 1px);
   background-size: 30px 30px;
 }
 
@@ -72,7 +72,7 @@
   font-family: 'Manrope', sans-serif;
   font-weight: 800;
   font-size: 0.72rem;
-  color: #244A6F;
+  color: #1f6b3b;
   letter-spacing: 0.25em;
   text-transform: uppercase;
   display: inline-flex;
@@ -95,20 +95,20 @@
   font-family: 'Manrope', sans-serif;
   font-weight: 800;
   font-size: clamp(2.25rem, 5vw, 3.25rem);
-  color: #1a1a2e;
+  color: #123f28;
   margin: 0 0 1.25rem;
   letter-spacing: -0.03em;
   line-height: 1.15;
 }
 
 .products__title-accent {
-  color: #244A6F;
+  color: #1f6b3b;
 }
 
 .products__title-line {
   width: 50px;
   height: 4px;
-  background: linear-gradient(90deg, #E36A2E, #244A6F);
+  background: linear-gradient(90deg, #E36A2E, #1f6b3b);
   border-radius: 2px;
   margin: 0 auto 1.75rem;
   transform-origin: center;
@@ -152,7 +152,7 @@
   position: relative;
   border-radius: 0;
   overflow: hidden;
-  background: #111;
+  background: #0b2f1e;
   height: 680px;
   cursor: pointer;
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.5s ease;
@@ -164,11 +164,11 @@
 
 /* Card accent glow */
 .products__card--blue {
-  box-shadow: 0 8px 32px rgba(36, 74, 111, 0.1);
+  box-shadow: 0 8px 32px rgba(31, 107, 59, 0.14);
 }
 
 .products__card--blue:hover {
-  box-shadow: 0 24px 64px rgba(36, 74, 111, 0.18);
+  box-shadow: 0 24px 64px rgba(31, 107, 59, 0.22);
 }
 
 .products__card--orange {
@@ -205,8 +205,8 @@
   background: linear-gradient(
     180deg,
     transparent 25%,
-    rgba(0, 0, 0, 0.4) 60%,
-    rgba(0, 0, 0, 0.8) 100%
+    rgba(8, 45, 27, 0.42) 60%,
+    rgba(8, 45, 27, 0.82) 100%
   );
   pointer-events: none;
   transition: background 0.5s ease;
@@ -215,9 +215,9 @@
 .products__card:hover .products__card-image-overlay {
   background: linear-gradient(
     180deg,
-    rgba(0, 0, 0, 0.1) 10%,
-    rgba(0, 0, 0, 0.5) 50%,
-    rgba(0, 0, 0, 0.88) 100%
+    rgba(8, 45, 27, 0.12) 10%,
+    rgba(8, 45, 27, 0.52) 50%,
+    rgba(8, 45, 27, 0.9) 100%
   );
 }
 
@@ -366,12 +366,12 @@
   font-family: 'Manrope', sans-serif;
   font-weight: 500;
   font-size: 0.72rem;
-  color: #244A6F;
+  color: #1f6b3b;
   letter-spacing: 0.04em;
   padding: 0.4rem 1rem;
   background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(8px);
-  border: 1px solid rgba(36, 74, 111, 0.08);
+  border: 1px solid rgba(31, 107, 59, 0.12);
   border-radius: 50px;
 }
 

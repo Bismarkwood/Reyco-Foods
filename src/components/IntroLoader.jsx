@@ -117,7 +117,7 @@ const styles = {
     fontSize: "11px",
     letterSpacing: "0.28em",
     textTransform: "uppercase",
-    color: "#244A6F",
+    color: "#1f6b3b",
     fontWeight: 600,
     fontFamily: "'Manrope', 'Segoe UI', sans-serif",
   },

@@ -242,13 +242,13 @@ export default function AboutPage() {
             animate={diffInView ? "visible" : "hidden"}
           >
             <img
-              src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?auto=format&fit=crop&w=800&q=85"
-              alt="Salted pig feet in brine jars"
+              src="/carousel_frozen_pork_cuts.png"
+              alt="Frozen pork cuts prepared for export"
               className="different-img"
             />
             <img
-              src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=85"
-              alt="Cold chain logistics for frozen meat export"
+              src="/ryeco_warehouse_1780437790543.png"
+              alt="Ryeco Foods cold store warehouse"
               className="different-img"
             />
           </motion.div>
@@ -336,7 +336,7 @@ export default function AboutPage() {
                 {/* Gradient overlay */}
                 <div
                   className="country-card__overlay"
-                  style={{ background: `linear-gradient(180deg, rgba(5,7,10,0.2) 0%, rgba(5,7,10,0.92) 70%)` }}
+                  style={{ background: `linear-gradient(180deg, rgba(8,45,27,0.18) 0%, rgba(8,45,27,0.92) 70%)` }}
                 />
                 {/* Colour accent bar */}
                 <div className="country-card__accent" style={{ background: c.color }} />

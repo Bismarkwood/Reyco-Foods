@@ -2,67 +2,48 @@
 import React from "react";
 import "./MarqueeBanner.css";
 
+const topItems = [
+  "Frozen Meat Export",
+  "Salted Pig Feet in Brine",
+  "Pork, Beef & Poultry",
+  "Offal Meat Supply",
+  "UK to West Africa",
+  "Cold-Chain Ready",
+];
+
+const bottomItems = [
+  "Ghana",
+  "Liberia",
+  "Sierra Leone",
+  "Caribbean Islands",
+  "18-24 Month Shelf Life",
+  "Reliable Trade Supply",
+];
+
+function MarqueeTrack({ items, reverse = false }) {
+  const repeatedItems = [...items, ...items];
+
+  return (
+    <div className={`marquee-banner__track${reverse ? " marquee-banner__track--reverse" : ""}`}>
+      {repeatedItems.map((item, index) => (
+        <React.Fragment key={`${item}-${index}`}>
+          <span className="marquee-banner__item">{item}</span>
+          <span className="marquee-banner__dot">&bull;</span>
+        </React.Fragment>
+      ))}
+    </div>
+  );
+}
+
 export default function MarqueeBanner() {
   return (
     <div className="marquee-banner">
-      {/* Top strip — moves left */}
       <div className="marquee-banner__strip marquee-banner__strip--orange">
-        <div className="marquee-banner__track">
-          <span className="marquee-banner__item">Household Products</span>
-          <span className="marquee-banner__dot">●</span>
-          <span className="marquee-banner__item">Retail Placement</span>
-          <span className="marquee-banner__dot">●</span>
-          <span className="marquee-banner__item">Toiletries</span>
-          <span className="marquee-banner__dot">●</span>
-          <span className="marquee-banner__item">Distribution</span>
-          <span className="marquee-banner__dot">●</span>
-          <span className="marquee-banner__item">Food &amp; Beverages</span>
-          <span className="marquee-banner__dot">●</span>
-          <span className="marquee-banner__item">Market Activation</span>
-          <span className="marquee-banner__dot">●</span>
-          <span className="marquee-banner__item">Household Products</span>
-          <span className="marquee-banner__dot">●</span>
-          <span className="marquee-banner__item">Retail Placement</span>
-          <span className="marquee-banner__dot">●</span>
-          <span className="marquee-banner__item">Toiletries</span>
-          <span className="marquee-banner__dot">●</span>
-          <span className="marquee-banner__item">Distribution</span>
-          <span className="marquee-banner__dot">●</span>
-          <span className="marquee-banner__item">Food &amp; Beverages</span>
-          <span className="marquee-banner__dot">●</span>
-          <span className="marquee-banner__item">Market Activation</span>
-          <span className="marquee-banner__dot">●</span>
-        </div>
+        <MarqueeTrack items={topItems} />
       </div>
 
-      {/* Bottom strip — moves right */}
       <div className="marquee-banner__strip marquee-banner__strip--blue">
-        <div className="marquee-banner__track marquee-banner__track--reverse">
-          <span className="marquee-banner__item">Source to Shelf</span>
-          <span className="marquee-banner__dot">●</span>
-          <span className="marquee-banner__item">FMCG Sourcing</span>
-          <span className="marquee-banner__dot">●</span>
-          <span className="marquee-banner__item">Ghana Market</span>
-          <span className="marquee-banner__dot">●</span>
-          <span className="marquee-banner__item">Reliable Supply</span>
-          <span className="marquee-banner__dot">●</span>
-          <span className="marquee-banner__item">Brand Growth</span>
-          <span className="marquee-banner__dot">●</span>
-          <span className="marquee-banner__item">Nationwide Coverage</span>
-          <span className="marquee-banner__dot">●</span>
-          <span className="marquee-banner__item">Source to Shelf</span>
-          <span className="marquee-banner__dot">●</span>
-          <span className="marquee-banner__item">FMCG Sourcing</span>
-          <span className="marquee-banner__dot">●</span>
-          <span className="marquee-banner__item">Ghana Market</span>
-          <span className="marquee-banner__dot">●</span>
-          <span className="marquee-banner__item">Reliable Supply</span>
-          <span className="marquee-banner__dot">●</span>
-          <span className="marquee-banner__item">Brand Growth</span>
-          <span className="marquee-banner__dot">●</span>
-          <span className="marquee-banner__item">Nationwide Coverage</span>
-          <span className="marquee-banner__dot">●</span>
-        </div>
+        <MarqueeTrack items={bottomItems} reverse />
       </div>
     </div>
   );

@@ -12,7 +12,6 @@ import Footer from "./components/Footer";
 import IntroLoader from "./components/IntroLoader";
 import AboutPage from "./components/AboutPage";
 import ScrollToHash from "./components/ScrollToHash";
-import RyecoSection from "./components/RyecoSection";
 import ContactModal from "./components/ContactModal";
 
 function HomePage({ openContactModal }) {
@@ -26,7 +25,6 @@ function HomePage({ openContactModal }) {
         <AboutSection />
         <ServicesSection />
         <ProductsSection />
-        <RyecoSection />
         <CTABanner openContactModal={openContactModal} />
         <Footer />
       </div>

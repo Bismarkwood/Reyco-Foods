@@ -15,7 +15,7 @@
   padding: 2.25rem;
   border-radius: 8px;
   background: #ffffff;
-  color: #101318;
+  color: #123f28;
   box-shadow: 0 28px 80px rgba(0, 0, 0, 0.32);
 }
 
@@ -30,7 +30,7 @@
   border: 1px solid rgba(16, 19, 24, 0.12);
   border-radius: 50%;
   background: #fff;
-  color: #101318;
+  color: #123f28;
   cursor: pointer;
   font: 700 0.95rem/1 "Manrope", sans-serif;
   transition: background 0.2s ease, transform 0.2s ease;
@@ -52,7 +52,7 @@
 .contact-modal__title {
   margin: 0;
   max-width: 420px;
-  color: #101318;
+  color: #123f28;
   font: 700 2rem/1.15 "Manrope", sans-serif;
   letter-spacing: 0;
 }
@@ -94,7 +94,7 @@
 
 .contact-modal__secondary {
   border: 1px solid rgba(16, 19, 24, 0.14);
-  color: #101318;
+  color: #123f28;
   background: #fff;
 }
 

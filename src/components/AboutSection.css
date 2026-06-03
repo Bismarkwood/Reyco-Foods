@@ -27,8 +27,8 @@
   pointer-events: none;
   opacity: 0.025;
   background-image:
-    linear-gradient(rgba(36, 74, 111, 0.3) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(36, 74, 111, 0.3) 1px, transparent 1px);
+    linear-gradient(rgba(31, 107, 59, 0.3) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(31, 107, 59, 0.3) 1px, transparent 1px);
   background-size: 60px 60px;
 }
 
@@ -44,7 +44,7 @@
   font-family: 'Manrope', sans-serif;
   font-weight: 800;
   font-size: 0.7rem;
-  color: #244A6F;
+  color: #1f6b3b;
   letter-spacing: 0.25em;
   text-transform: uppercase;
   display: inline-flex;
@@ -67,20 +67,20 @@
   font-family: 'Manrope', sans-serif;
   font-weight: 800;
   font-size: clamp(2.25rem, 5vw, 3.25rem);
-  color: #1a1a2e;
+  color: #123f28;
   margin: 0 0 1.5rem;
   letter-spacing: -0.03em;
   line-height: 1.15;
 }
 
 .about__title-accent {
-  color: #244A6F;
+  color: #1f6b3b;
 }
 
 .about__title-line {
   width: 60px;
   height: 4px;
-  background: linear-gradient(90deg, #E36A2E, #244A6F);
+  background: linear-gradient(90deg, #E36A2E, #1f6b3b);
   border-radius: 2px;
   margin: 0 auto 2rem;
 }
@@ -132,7 +132,7 @@
 
 /* ─── Content Card ─── */
 .about__carousel-card--content {
-  background: var(--card-color, #244A6F);
+  background: var(--card-color, #1f6b3b);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -209,7 +209,7 @@
 
 /* ─── Image Card ─── */
 .about__carousel-card--image {
-  background: #111;
+  background: #0b2f1e;
 }
 
 .about__carousel-img {
