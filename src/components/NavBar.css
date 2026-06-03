@@ -6,7 +6,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 72px;
+  height: 76px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -36,7 +36,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 72px;
+  height: 76px;
 }
 
 /* ─── Logo ─── */
@@ -47,8 +47,10 @@
 }
 
 .nav-logo {
-  height: 58px;
+  height: 86px;
   width: auto;
+  max-width: 195px;
+  object-fit: contain;
   transition: transform 0.3s ease;
 }
 
@@ -174,7 +176,7 @@
 /* ─── Mobile menu ─── */
 .nav-mobile {
   position: absolute;
-  top: 72px;
+  top: 76px;
   left: 0;
   width: 100%;
   background: #ffffff;
@@ -233,6 +235,20 @@
 
 /* ─── Responsive ─── */
 @media (max-width: 900px) {
+  .navbar,
+  .nav-container {
+    height: 72px;
+  }
+
+  .nav-logo {
+    height: 68px;
+    max-width: 155px;
+  }
+
+  .nav-mobile {
+    top: 72px;
+  }
+
   .nav-menu {
     display: none;
   }
