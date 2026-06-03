@@ -279,8 +279,8 @@ export default function AboutPage() {
               Where We <em>Ship</em> To
             </h2>
             <p className="countries-subtitle">
-              From the United Kingdom, Ryeco Foods delivers premium frozen meat and
-              Salted Pig Feet in Brine directly to markets across West Africa and the Caribbean.
+              From the United Kingdom, Ryeco Foods supplies export-ready frozen meat,
+              offal, and Salted Pig Feet in Brine to African trade partners and island markets.
             </p>
           </motion.div>
 
@@ -290,33 +290,38 @@ export default function AboutPage() {
               {
                 name: "Ghana",
                 region: "West Africa",
+                code: "GH",
                 flag: "🇬🇭",
-                img: "https://images.unsplash.com/photo-1629218579758-90b93e07f9b0?auto=format&fit=crop&w=800&q=85",
-                color: "#006B3F",
-                desc: "Our primary and longest-standing export market in West Africa.",
+                img: "/carousel_salted_pig_brine.png",
+                color: "#1f6b3b",
+                desc: "A key market for Salted Pig Feet in Brine and frozen meat supply built for hot-climate distribution.",
               },
               {
                 name: "Liberia",
                 region: "West Africa",
+                code: "LR",
                 flag: "🇱🇷",
-                img: "https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=800&q=85",
-                color: "#BF0A30",
-                desc: "A fast-growing destination for our frozen meat and offal range.",
+                img: "/carousel_frozen_export_logistics.png",
+                color: "#e36a2e",
+                desc: "Reliable cold-chain exports for Liberian importers, wholesalers, and food service buyers.",
               },
               {
                 name: "Sierra Leone",
                 region: "West Africa",
+                code: "SL",
                 flag: "🇸🇱",
-                img: "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=800&q=85",
-                color: "#1EB53A",
-                desc: "Premium pork and frozen cuts reaching consumers across the country.",
+                img: "/frozen_beef_chicken.png",
+                color: "#1f6b3b",
+                desc: "Export-grade beef, poultry, pork, and offal products prepared for Sierra Leone's growing food trade.",
               },
               {
                 name: "Caribbean Islands",
                 region: "Caribbean",
+                code: "CI",
                 flag: "🏝️",
-                img: "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=800&q=85",
+                img: "/frozen_offal_turkey.png",
                 color: "#E36A2E",
+                displayDesc: "Frozen poultry, turkey, offal, and brined products suitable for tropical market needs.",
                 desc: "Salted Pig Feet in Brine — engineered for tropical climates.",
               },
             ].map((c, i) => (
@@ -344,12 +349,12 @@ export default function AboutPage() {
                 {/* Content */}
                 <div className="country-card__content">
                   <div className="country-card__top">
-                    <span className="country-card__flag">{c.flag}</span>
+                    <span className="country-card__flag">{c.code}</span>
                     <span className="country-card__region">{c.region}</span>
                   </div>
                   <div className="country-card__bottom">
                     <h3 className="country-card__name">{c.name}</h3>
-                    <p className="country-card__desc">{c.desc}</p>
+                    <p className="country-card__desc">{c.displayDesc || c.desc}</p>
                     <div className="country-card__arrow">
                       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                         <path d="M7 17L17 7M17 7H7M17 7v10"/>
