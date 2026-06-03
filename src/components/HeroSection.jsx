@@ -23,12 +23,15 @@ export default function HeroSection({ openContactModal }) {
         >
           <p className="hero__eyebrow">UK frozen meat export</p>
           <h1 className="hero__title">
-            Reliable frozen meat supply for African markets.
+            Reliable frozen meat supply <br /> for African markets.
           </h1>
           <p className="hero__text">
-            Ryeco Foods sources, prepares, and exports frozen meat and offal
-            with dependable cold-chain handling from the UK to West Africa and
-            the Caribbean.
+            Ryeco Foods sources, prepares, and exports premium frozen meat and offal,
+            ensuring the highest quality standards from the UK to West Africa and the Caribbean.
+          </p>
+          <p className="hero__text">
+            With dependable, temperature-controlled cold-chain logistics, we guarantee
+            that our products arrive fresh, safe, and ready to meet the demands of your market.
           </p>
 
           <div className="hero__actions">

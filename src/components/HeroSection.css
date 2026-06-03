@@ -22,7 +22,7 @@
 }
 
 .hero__copy {
-  max-width: 680px;
+  max-width: 900px;
 }
 
 .hero__eyebrow {
@@ -46,12 +46,20 @@
 }
 
 .hero__text {
-  margin: 1.4rem 0 2rem;
+  margin: 1rem 0;
   max-width: 590px;
   color: rgba(255, 255, 255, 0.82);
   font-family: "Manrope", sans-serif;
   font-size: 1.08rem;
   line-height: 1.75;
+}
+
+.hero__text:first-of-type {
+  margin-top: 1.4rem;
+}
+
+.hero__text:last-of-type {
+  margin-bottom: 2rem;
 }
 
 .hero__actions {
@@ -128,11 +136,11 @@
   }
 
   .hero__title {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   .hero__text {
-    font-size: 0.98rem;
+    font-size: 0.9rem;
   }
 
   .hero__actions {
