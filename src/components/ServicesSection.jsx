@@ -30,49 +30,55 @@ const clipReveal = (delay = 0) => ({
   },
 });
 
-const services = [
+const products = [
   {
     number: "01",
-    label: "MARKET VISIBILITY",
-    title: "Retail Placement",
+    badge: "SIGNATURE PRODUCT",
+    title: "Zilla Salted Pig Feet in Brine",
+    subtitle: "Green-Top Lid · 18–24 Month Shelf Life",
     description:
-      "We help brands secure stronger visibility and accessibility across relevant retail outlets, ensuring products are positioned where consumers can easily discover and purchase them.",
-    highlights: ["Shelf Visibility", "Outlet Positioning", "Trade Relationships", "Sales Performance Support"],
-    image: "https://images.unsplash.com/photo-1631729371254-42c2892f0e6e?auto=format&fit=crop&w=900&q=85",
-    caption: "Retail visibility across key outlets",
+      "Our flagship product — premium salted pig feet packed in strong brine, specifically formulated for hot climates. No refrigeration needed. The iconic green-top lid seals in freshness and guarantees a shelf life of up to 18–24 months, making it ideal for export to any region.",
+    highlights: ["No Refrigeration Required", "18–24 Month Shelf Life", "Hot-Climate Formula", "Export Ready"],
+    image: "/meat_5.png",
+    caption: "Zilla Green-Top · Premium Brine Formula",
     variant: "light",
+    tag: "BEST SELLER",
   },
   {
     number: "02",
-    label: "SOURCE TO SHELF",
-    title: "Distribution",
+    badge: "FROZEN EXPORTS",
+    title: "Frozen Meat & Offal",
+    subtitle: "Cold-Chain Certified · Bulk Export",
     description:
-      "We support seamless product movement from source to shelf through a well-managed distribution network, enabling timely delivery, broader coverage, and sustained product availability.",
-    highlights: ["Product Flow", "Timely Delivery", "Channel Coverage", "Availability Management"],
-    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=900&q=85",
-    caption: "Reliable movement from source to shelf",
+      "Beyond pig feet, RycoFoods exports a wide range of frozen meat and offal products. Every batch is cold-chain certified, hygienically processed, and packaged for long-haul international transport — maintaining quality from our facilities to your market.",
+    highlights: ["Cold-Chain Certified", "Bulk Export Available", "Hygienically Processed", "International Shipping"],
+    image: "/meat_3.png",
+    caption: "Frozen Meat & Offal · Bulk Export Quality",
     variant: "dark",
+    tag: "EXPORT GRADE",
   },
   {
     number: "03",
-    label: "BRAND GROWTH",
-    title: "Marketing Activation",
+    badge: "HOT-CLIMATE SOLUTION",
+    title: "Salted Pig Feet in Brine",
+    subtitle: "Strong Brine Formula · No Cold Storage",
     description:
-      "We support brands with market-focused campaigns, merchandising, in-store promotions, and activations designed to increase awareness, drive engagement, and boost sales.",
-    highlights: ["Merchandising", "In-Store Promotions", "Brand Campaigns", "Consumer Engagement"],
-    image: "https://images.unsplash.com/photo-1607082349566-187342175e2f?auto=format&fit=crop&w=900&q=85",
-    caption: "Campaigns that drive consumer engagement",
+      "Crafted specifically for markets without reliable cold storage, our Salted Pig Feet in Brine deliver consistent quality in the most demanding climates. The strong brine preserves natural flavour and texture — no freezer, no problem.",
+    highlights: ["Strong Brine Preservation", "Consistent Flavour", "Tropical-Climate Safe", "Retail & Wholesale"],
+    image: "/meat_4.png",
+    caption: "Hot-Climate Ready · Strong Brine Formula",
     variant: "accent",
+    tag: "HOT CLIMATE",
   },
 ];
 
-function ServicePanel({ service, index }) {
+function ProductPanel({ product }) {
   const panelRef = useRef(null);
   const isInView = useInView(panelRef, { once: true, margin: "-100px" });
 
   return (
     <div
-      className={`services__panel services__panel--${service.variant}`}
+      className={`services__panel services__panel--${product.variant}`}
       ref={panelRef}
     >
       {/* Image side */}
@@ -83,13 +89,14 @@ function ServicePanel({ service, index }) {
         animate={isInView ? "visible" : "hidden"}
       >
         <img
-          src={service.image}
-          alt={service.title}
+          src={product.image}
+          alt={product.title}
           className="services__panel-image"
           loading="lazy"
         />
         <div className="services__panel-image-overlay" />
-        <span className="services__panel-caption">{service.caption}</span>
+        <span className="services__panel-caption">{product.caption}</span>
+        <span className="services__panel-tag">{product.tag}</span>
       </motion.div>
 
       {/* Content side */}
@@ -100,7 +107,7 @@ function ServicePanel({ service, index }) {
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
         >
-          {service.number}
+          {product.number}
         </motion.span>
 
         <motion.span
@@ -109,7 +116,7 @@ function ServicePanel({ service, index }) {
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
         >
-          {service.label}
+          {product.badge}
         </motion.span>
 
         <motion.h3
@@ -118,8 +125,17 @@ function ServicePanel({ service, index }) {
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
         >
-          {service.title}
+          {product.title}
         </motion.h3>
+
+        <motion.p
+          className="services__panel-subtitle"
+          variants={fadeUp(0.55)}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+        >
+          {product.subtitle}
+        </motion.p>
 
         <motion.div
           className="services__panel-line"
@@ -134,7 +150,7 @@ function ServicePanel({ service, index }) {
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
         >
-          {service.description}
+          {product.description}
         </motion.p>
 
         <motion.ul
@@ -143,7 +159,7 @@ function ServicePanel({ service, index }) {
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
         >
-          {service.highlights.map((h) => (
+          {product.highlights.map((h) => (
             <li key={h} className="services__panel-highlight">
               <span className="services__panel-highlight-dot" />
               {h}
@@ -151,18 +167,11 @@ function ServicePanel({ service, index }) {
           ))}
         </motion.ul>
 
-
-
         {/* Page indicator */}
         <span className="services__panel-indicator">
-          {service.number} / 03
+          {product.number} / 03
         </span>
       </div>
-
-      {/* Route line for distribution panel */}
-      {service.variant === "dark" && (
-        <div className="services__panel-route" />
-      )}
     </div>
   );
 }
@@ -180,8 +189,8 @@ export default function ServicesSection() {
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
       >
-        <span className="services__tag">OUR SERVICES</span>
-        <h2 className="services__title">Designed to Move Brands Faster</h2>
+        <span className="services__tag">FEATURED PRODUCTS</span>
+        <h2 className="services__title">Premium Meat Exports by RycoFoods</h2>
         <motion.div
           className="services__title-line"
           initial={{ scaleX: 0 }}
@@ -189,13 +198,14 @@ export default function ServicesSection() {
           transition={{ duration: 0.6, delay: 0.4, ease: cineEase }}
         />
         <p className="services__intro">
-          From retail visibility to product movement and market activation,
-          Ritestock helps FMCG brands enter, grow, and remain available across
-          Ghana's retail market.
+          Ryeco Foods are producers and exporters of high-quality Salted Pig Feet
+          in Brine — specifically made for hot climates without the need to
+          refrigerate. Our Zilla Salted Pig Feet with green-top lid carry a
+          long-life shelf life of up to 18–24 months.
         </p>
       </motion.div>
 
-      {/* Progress bar */}
+      {/* Product nav */}
       <motion.div
         className="services__progress"
         variants={fadeIn(0.6)}
@@ -206,16 +216,16 @@ export default function ServicesSection() {
           <div className="services__progress-fill" />
         </div>
         <div className="services__progress-labels">
-          <span>Retail Placement</span>
-          <span>Distribution</span>
-          <span>Marketing</span>
+          <span>Zilla Pig Feet</span>
+          <span>Frozen Meat &amp; Offal</span>
+          <span>Brine Pig Feet</span>
         </div>
       </motion.div>
 
-      {/* Service panels */}
+      {/* Product panels */}
       <div className="services__panels">
-        {services.map((service, i) => (
-          <ServicePanel key={service.number} service={service} index={i} />
+        {products.map((product) => (
+          <ProductPanel key={product.number} product={product} />
         ))}
       </div>
     </section>

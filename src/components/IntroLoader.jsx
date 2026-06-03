@@ -8,14 +8,14 @@ const IntroLoader = () => {
   const [showLoader, setShowLoader] = useState(false);
 
   useEffect(() => {
-    const hasSeenLoader = sessionStorage.getItem("ritestock-loader-seen");
+    const hasSeenLoader = sessionStorage.getItem("ryecofoods-loader-seen");
 
     if (!hasSeenLoader) {
       setShowLoader(true);
 
       const timer = setTimeout(() => {
         setShowLoader(false);
-        sessionStorage.setItem("ritestock-loader-seen", "true");
+        sessionStorage.setItem("ryecofoods-loader-seen", "true");
       }, 3200);
 
       return () => clearTimeout(timer);
@@ -46,7 +46,7 @@ const IntroLoader = () => {
             {/* ── Step 2: logo reveal (0.9s → 1.5s) ── */}
             <motion.img
               src="/logo.png"
-              alt="Ritestock Ltd"
+              alt="Ryeco Foods"
               style={styles.logo}
               initial={{ opacity: 0, scale: 0.92, filter: "blur(10px)" }}
               animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
@@ -68,7 +68,7 @@ const IntroLoader = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 2.0, duration: 0.55, ease: EASE }}
             >
-              FMCG Sourcing &amp; Distribution
+              Producers &amp; Exporters of Quality Meats
             </motion.p>
 
           </div>

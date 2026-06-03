@@ -108,6 +108,9 @@
 }
 
 .cta-banner__label {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
   font-family: 'Manrope', sans-serif;
   font-weight: 600;
   font-size: 0.72rem;

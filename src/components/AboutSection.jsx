@@ -16,93 +16,101 @@ const fadeUp = (delay = 0) => ({
 
 // Cards: content card followed by image card, alternating
 const carouselItems = [
+  // Salted Pig Feet in Brine
   {
     type: "content",
-    title: "Retail Placement",
-    quote: "We help brands secure stronger visibility across relevant retail outlets, ensuring products reach consumers where they shop.",
+    title: "Salted Pig Feet in Brine",
+    quote: "Ryeco Foods produces and exports high-quality Salted Pig Feet in Brine — made for hot climates with no refrigeration needed. Green-top lid with a shelf life of up to 18 months.",
     color: "#244A6F",
   },
   {
     type: "image",
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=600&q=85",
-    alt: "Neatly arranged household cleaning products on shelf",
+    image: "/carousel_salted_pig_brine.png",
+    alt: "Jars of salted pig feet in brine with green lids on a retail shelf",
   },
+  // Frozen Pork Cuts
   {
     type: "content",
-    title: "Reliable Distribution",
-    quote: "Our distribution capability supports smooth product movement from source to shelf, maintaining availability across retail channels.",
+    title: "Frozen Pork Cuts",
+    quote: "We export frozen pig feet, pig tails, and pork spareribs — premium quality, cold-chain maintained, packed and ready for African markets.",
     color: "#E36A2E",
   },
   {
     type: "image",
-    image: "https://images.unsplash.com/photo-1625772299848-391b6a87d7b3?auto=format&fit=crop&w=600&q=85",
-    alt: "Stacked cardboard boxes ready for distribution",
+    image: "/carousel_frozen_pork_cuts.png",
+    alt: "Vacuum-packed frozen pork spareribs and pig tails for export",
   },
+  // Frozen Beef & Mutton
   {
     type: "content",
-    title: "Market Activation",
-    quote: "We support brands with merchandising, in-store promotions, and campaigns that increase awareness and drive consumer engagement.",
+    title: "Frozen Beef & Mutton",
+    quote: "Our frozen beef and mutton range includes beef cuts, beef feet, beef sinews, beef neck, and beef liver — export-grade and cold-chain certified.",
     color: "#1a1a2e",
   },
   {
     type: "image",
-    image: "https://images.unsplash.com/photo-1631729371254-42c2892f0e6e?auto=format&fit=crop&w=600&q=85",
-    alt: "Colorful beverage bottles lined up on display",
+    image: "/carousel_frozen_export_logistics.png",
+    alt: "Frozen beef and mutton export boxes in cold storage warehouse",
   },
+  // Frozen Chicken
   {
     type: "content",
-    title: "Product Categories",
-    quote: "Household products, toiletries, food, and beverages — the core categories we source, position, and distribute across Ghana.",
+    title: "Frozen Chicken",
+    quote: "We supply frozen chicken quarters, chicken legs, and whole chicken — reliably sourced and delivered across Africa with full cold-chain integrity.",
     color: "#244A6F",
   },
   {
     type: "image",
-    image: "https://images.unsplash.com/photo-1612817288484-6f916006741a?auto=format&fit=crop&w=600&q=85",
-    alt: "Toiletries and personal care products on shelf",
+    image: "https://images.unsplash.com/photo-1587593810167-a84920ea0781?auto=format&fit=crop&w=600&q=85",
+    alt: "Frozen chicken quarters and legs packaged for export",
   },
+  // Offal Meats
   {
     type: "content",
-    title: "Supply Chain Excellence",
-    quote: "End-to-end supply chain management ensuring products move efficiently from manufacturers to retail shelves without disruption.",
+    title: "Offal Meats",
+    quote: "A complete offal range — chicken gizzards, chicken liver, beef liver — processed to export standard and in high demand across African retail and wholesale markets.",
     color: "#E36A2E",
   },
   {
     type: "image",
-    image: "https://images.unsplash.com/photo-1604480132736-44c188fe4d20?auto=format&fit=crop&w=600&q=85",
-    alt: "Packaged food products and snacks on retail display",
+    image: "https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?auto=format&fit=crop&w=600&q=85",
+    alt: "Processed offal meats including gizzards and liver for export",
   },
+  // Poultry — Turkey
   {
     type: "content",
-    title: "Brand Partnerships",
-    quote: "We build lasting partnerships with leading FMCG brands, becoming their trusted distribution arm in the Ghanaian market.",
+    title: "Poultry — Turkey",
+    quote: "Whole turkey, turkey legs, and turkey products exported frozen — consistently available and trusted by buyers across the African continent.",
     color: "#1a1a2e",
   },
   {
     type: "image",
-    image: "https://images.unsplash.com/photo-1583947215259-38e31be8751f?auto=format&fit=crop&w=600&q=85",
-    alt: "Detergent and cleaning supplies neatly displayed",
+    image: "https://images.unsplash.com/photo-1574672280600-4accfa5b6f98?auto=format&fit=crop&w=600&q=85",
+    alt: "Frozen turkey legs and whole turkey ready for export",
   },
+  // Cold Chain Logistics
   {
     type: "content",
-    title: "Market Intelligence",
-    quote: "Data-driven insights on consumer behaviour, retail trends, and market gaps help our partners make smarter distribution decisions.",
+    title: "Cold Chain Logistics",
+    quote: "End-to-end cold chain management ensures every frozen product — from pork to poultry to offal — arrives at its African destination in perfect condition.",
     color: "#244A6F",
   },
   {
     type: "image",
-    image: "https://images.unsplash.com/photo-1601598851547-4302969d0614?auto=format&fit=crop&w=600&q=85",
-    alt: "Cereal boxes and breakfast products on supermarket shelf",
+    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=600&q=85",
+    alt: "Refrigerated shipping containers at a port ready for Africa export",
   },
+  // Africa Export Reach
   {
     type: "content",
-    title: "Nationwide Coverage",
-    quote: "From Accra to Kumasi and beyond, our distribution network ensures consistent product availability across Ghana's key retail zones.",
+    title: "Africa Export Reach",
+    quote: "From West Africa to East Africa, Ryeco Foods' frozen meat and Offal products reach markets continent-wide — building supply reliability for retailers and distributors.",
     color: "#E36A2E",
   },
   {
     type: "image",
-    image: "https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?auto=format&fit=crop&w=600&q=85",
-    alt: "Fresh fruits and packaged food products display",
+    image: "https://images.unsplash.com/photo-1494412651409-8963ce7935a7?auto=format&fit=crop&w=600&q=85",
+    alt: "Container ship transporting frozen meat exports to Africa",
   },
 ];
 
@@ -126,16 +134,13 @@ export default function AboutSection() {
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
       >
-        <span className="about__tag">ABOUT RITESTOCK</span>
+        <span className="about__tag">ABOUT RYCOFOODS</span>
         <h2 className="about__title">
-          Connecting Products to<br />
-          <span className="about__title-accent">Ghana's Retail Market</span>
+          Company Brief Section
         </h2>
         <div className="about__title-line" />
         <p className="about__intro">
-          Ritestock is a results-driven FMCG sourcing and distribution company
-          helping brands, producers, and retailers move high-demand consumer
-          goods efficiently across Ghana's retail channels.
+          Ryeco foods are producers and exporters of high-quality Salted Pig Feet in Brine specifically made for hot climate without the need to refrigerate. Our Salted Pig Feet in strong brine with green-top lid has a longer shelf life of up to 18 months and we also export frozen meat and Offal.
         </p>
       </motion.div>
 

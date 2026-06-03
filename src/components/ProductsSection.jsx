@@ -25,29 +25,26 @@ const fadeIn = (delay = 0) => ({
 const products = [
   {
     number: "01",
-    title: "Household Essentials",
-    description:
-      "Essential household products curated for daily consumer needs across Ghana's retail channels.",
-    badge: "DAILY USE",
-    image: "https://images.unsplash.com/photo-1583947215259-38e31be8751f?auto=format&fit=crop&w=700&q=85",
-    accent: "blue",
+    title: "Frozen Pork Cuts",
+    description: "Premium frozen pig feet, pig tails, and pork spareribs — expertly prepared and packed for export. Cold-chain quality guaranteed from source to destination across Africa.",
+    badge: "EXPORT READY",
+    image: "/frozen_pig_feet.png",
+    accent: "orange",
   },
   {
     number: "02",
-    title: "Toiletries & Personal Care",
-    description:
-      "Trusted personal care products designed for daily hygiene, convenience, and consumer confidence.",
+    title: "Beef, Mutton & Chicken",
+    description: "Frozen beef, mutton, chicken quarters, and chicken legs. Also includes frozen beef feet, beef sinews, beef neck, beef liver, and a full range of offal meats for diverse market demands.",
     badge: "HIGH DEMAND",
-    image: "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?auto=format&fit=crop&w=700&q=85",
+    image: "/frozen_beef_chicken.png",
     accent: "orange",
   },
   {
     number: "03",
-    title: "Food & Beverages",
-    description:
-      "A diverse portfolio of food and beverage products tailored to evolving consumer tastes.",
+    title: "Poultry, Offal & Sausages",
+    description: "Turkey legs, whole turkey, whole chicken, chicken gizzards, chicken liver, beef liver, and sausages — a complete frozen poultry and offal portfolio tailored for African markets.",
     badge: "FAST MOVING",
-    image: "https://images.unsplash.com/photo-1621939514649-280e2ee25f60?auto=format&fit=crop&w=700&q=85",
+    image: "/frozen_offal_turkey.png",
     accent: "blue",
   },
 ];
@@ -71,11 +68,11 @@ export default function ProductsSection() {
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
       >
-        <span className="products__tag">PRODUCT CATEGORIES</span>
-        <h2 className="products__title">
-          Fast-Moving Essentials for{" "}
-          <span className="products__title-accent">Everyday Markets</span>
-        </h2>
+        <span className="products__tag">FROZEN MEAT EXPORT</span>
+          <h2 className="products__title">
+            Frozen Meat Export to Africa
+            <span className="products__title-accent"></span>
+          </h2>
         <motion.div
           className="products__title-line"
           initial={{ scaleX: 0 }}
@@ -83,9 +80,7 @@ export default function ProductsSection() {
           transition={{ duration: 0.6, delay: 0.4, ease: cineEase }}
         />
         <p className="products__intro">
-          Ritestock sources and distributes everyday consumer products across
-          household, toiletries, food, and beverage categories — helping brands
-          stay visible, available, and market-ready.
+          Ryeco Foods exports a full range of frozen meats to Africa — including frozen pig feet, pig tail, pork spareribs, beef, mutton, chicken quarters, chicken legs, frozen beef feet, beef sinews, offal meat, chicken gizzards, chicken liver, beef liver, turkey legs, whole turkey, whole chicken, beef neck, and sausages.
         </p>
       </motion.div>
 

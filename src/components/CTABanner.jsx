@@ -30,11 +30,10 @@ const lineExpand = (delay = 0) => ({
   },
 });
 
-export default function CTABanner() {
+export default function CTABanner({ openContactModal }) {
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
 
-  // Parallax
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start end", "end start"],
@@ -43,7 +42,6 @@ export default function CTABanner() {
 
   return (
     <section className="cta-banner" id="contact" ref={sectionRef}>
-      {/* Background with parallax */}
       <motion.div
         className="cta-banner__bg"
         style={{ y: bgY }}
@@ -52,12 +50,10 @@ export default function CTABanner() {
         transition={{ duration: 14, ease: "easeOut" }}
       />
 
-      {/* Overlay layers */}
       <div className="cta-banner__overlay" />
       <div className="cta-banner__grain" />
       <div className="cta-banner__vignette" />
 
-      {/* Floating background words */}
       <div className="cta-banner__float-words">
         <span className="cta-banner__float-word cta-banner__float-word--1">Retail Placement</span>
         <span className="cta-banner__float-word cta-banner__float-word--2">Distribution</span>
@@ -67,9 +63,7 @@ export default function CTABanner() {
         <span className="cta-banner__float-word cta-banner__float-word--6">Food &amp; Beverages</span>
       </div>
 
-      {/* Content */}
       <div className="cta-banner__content">
-        {/* Label with lines */}
         <motion.div
           className="cta-banner__label-wrap"
           variants={fadeIn(0.3)}
@@ -82,7 +76,13 @@ export default function CTABanner() {
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
           />
-          <span className="cta-banner__label">Partner With Us</span>
+          <button
+            type="button"
+            className="cta-banner__label"
+            onClick={openContactModal}
+          >
+            Contact Us
+          </button>
           <motion.span
             className="cta-banner__label-line"
             variants={lineExpand(0.5)}
@@ -91,7 +91,6 @@ export default function CTABanner() {
           />
         </motion.div>
 
-        {/* Heading */}
         <motion.h2
           className="cta-banner__heading"
           variants={fadeUp(0.7)}
@@ -102,7 +101,6 @@ export default function CTABanner() {
           <em className="cta-banner__heading-italic">From Source to Shelf.</em>
         </motion.h2>
 
-        {/* Supporting text */}
         <motion.p
           className="cta-banner__text"
           variants={fadeUp(1.0)}
@@ -110,17 +108,19 @@ export default function CTABanner() {
           animate={isInView ? "visible" : "hidden"}
         >
           Whether you are a brand looking for distribution, a retailer seeking
-          reliable supply, or a partner exploring collaboration, Ritestock is
+          reliable supply, or a partner exploring collaboration, Ryeco Foods is
           ready to connect.
         </motion.p>
 
-        {/* Form */}
         <motion.form
           className="cta-banner__form"
           variants={fadeUp(1.3)}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          onSubmit={(e) => e.preventDefault()}
+          onSubmit={(e) => {
+            e.preventDefault();
+            openContactModal?.();
+          }}
         >
           <div className="cta-banner__input-wrap">
             <input
@@ -139,18 +139,17 @@ export default function CTABanner() {
           </div>
           <button type="submit" className="cta-banner__btn">
             <span className="cta-banner__btn-text">Start a Conversation</span>
-            <span className="cta-banner__btn-arrow">→</span>
+            <span className="cta-banner__btn-arrow">-&gt;</span>
           </button>
         </motion.form>
 
-        {/* Trust line */}
         <motion.p
           className="cta-banner__micro"
           variants={fadeIn(1.7)}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
         >
-          Trusted FMCG sourcing &amp; distribution partner in Ghana.
+          Trusted UK exporter of salted and frozen meats to West Africa and the Caribbean.
         </motion.p>
       </div>
     </section>

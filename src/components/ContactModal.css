@@ -1,0 +1,115 @@
+.contact-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: grid;
+  place-items: center;
+  padding: 1.25rem;
+  background: rgba(5, 8, 13, 0.72);
+  backdrop-filter: blur(10px);
+}
+
+.contact-modal__panel {
+  position: relative;
+  width: min(100%, 520px);
+  padding: 2.25rem;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #101318;
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.32);
+}
+
+.contact-modal__close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid rgba(16, 19, 24, 0.12);
+  border-radius: 50%;
+  background: #fff;
+  color: #101318;
+  cursor: pointer;
+  font: 700 0.95rem/1 "Manrope", sans-serif;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.contact-modal__close:hover {
+  background: #f4f5f6;
+  transform: translateY(-1px);
+}
+
+.contact-modal__eyebrow {
+  margin: 0 0 0.75rem;
+  color: #e36a2e;
+  font: 700 0.72rem/1.2 "Manrope", sans-serif;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.contact-modal__title {
+  margin: 0;
+  max-width: 420px;
+  color: #101318;
+  font: 700 2rem/1.15 "Manrope", sans-serif;
+  letter-spacing: 0;
+}
+
+.contact-modal__copy {
+  margin: 1rem 0 1.75rem;
+  color: rgba(16, 19, 24, 0.72);
+  font: 400 1rem/1.7 "Manrope", sans-serif;
+}
+
+.contact-modal__actions {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.contact-modal__primary,
+.contact-modal__secondary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0.8rem 1rem;
+  border-radius: 6px;
+  font: 700 0.95rem/1.2 "Manrope", sans-serif;
+  text-align: center;
+  text-decoration: none;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.contact-modal__primary {
+  background: #e36a2e;
+  color: #fff;
+}
+
+.contact-modal__primary:hover {
+  background: #cf591f;
+  transform: translateY(-1px);
+}
+
+.contact-modal__secondary {
+  border: 1px solid rgba(16, 19, 24, 0.14);
+  color: #101318;
+  background: #fff;
+}
+
+.contact-modal__secondary:hover {
+  border-color: rgba(227, 106, 46, 0.45);
+  background: #fff7f3;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 540px) {
+  .contact-modal__panel {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .contact-modal__title {
+    font-size: 1.55rem;
+  }
+}
