@@ -1,36 +1,10 @@
 // src/App.jsx
 import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import NavBar from "./components/NavBar";
-import HeroSection from "./components/HeroSection";
-import MarqueeBanner from "./components/MarqueeBanner";
-import AboutSection from "./components/AboutSection";
-import ServicesSection from "./components/ServicesSection";
-import ProductsSection from "./components/ProductsSection";
-import CTABanner from "./components/CTABanner";
-import Footer from "./components/Footer";
-import IntroLoader from "./components/IntroLoader";
-import AboutPage from "./components/AboutPage";
-import ScrollToHash from "./components/ScrollToHash";
-import ContactModal from "./components/ContactModal";
-
-function HomePage({ openContactModal }) {
-  return (
-    <>
-      <IntroLoader />
-      <div>
-        <NavBar openContactModal={openContactModal} />
-        <HeroSection openContactModal={openContactModal} />
-        <MarqueeBanner />
-        <AboutSection />
-        <ServicesSection />
-        <ProductsSection />
-        <CTABanner openContactModal={openContactModal} />
-        <Footer />
-      </div>
-    </>
-  );
-}
+import HomePage from "./pages/HomePage/HomePage";
+import AboutPage from "./pages/AboutPage/AboutPage";
+import ScrollToHash from "./components/ScrollToHash/ScrollToHash";
+import ContactModal from "./components/ContactModal/ContactModal";
 
 export default function App() {
   const [contactOpen, setContactOpen] = useState(false);

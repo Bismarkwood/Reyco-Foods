@@ -1,8 +1,8 @@
-// src/components/AboutPage.jsx
+// src/pages/AboutPage/AboutPage.jsx
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import NavBar from "./NavBar";
-import Footer from "./Footer";
+import NavBar from "../../components/NavBar/NavBar";
+import Footer from "../../components/Footer/Footer";
 import "./AboutPage.css";
 
 const cineEase = [0.25, 0.46, 0.45, 0.94];
