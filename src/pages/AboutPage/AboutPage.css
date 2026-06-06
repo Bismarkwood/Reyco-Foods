@@ -737,7 +737,7 @@
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .countries-cards {
     grid-template-columns: 1fr;
     gap: 1rem;
@@ -907,7 +907,7 @@
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .abt-section {
     padding: 4.5rem 1.25rem;
   }

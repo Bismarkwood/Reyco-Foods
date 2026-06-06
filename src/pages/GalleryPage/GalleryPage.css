@@ -703,7 +703,7 @@
   }
 }
 
-@media (max-width: 580px) {
+@media (max-width: 480px) {
   .lb-hero__title {
     font-size: clamp(3.2rem, 14vw, 5rem);
   }

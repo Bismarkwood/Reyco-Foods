@@ -225,7 +225,7 @@
 }
 
 /* ─── Responsive ─── */
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .about__carousel-card {
     flex: 0 0 300px;
     height: 440px;
@@ -240,7 +240,7 @@
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .about {
     padding: 5rem 0 4rem;
   }
@@ -267,7 +267,7 @@
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 480px) {
   .about__carousel-card {
     flex: 0 0 240px;
     height: 340px;
