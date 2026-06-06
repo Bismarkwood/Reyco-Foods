@@ -17,13 +17,22 @@
   z-index: 0;
 }
 
+.hero__preload {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
 .hero__carousel-slide {
   position: absolute;
   inset: 0;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  will-change: transform, opacity;
+  will-change: opacity;
 }
 
 /* ─── Overlay ─── */

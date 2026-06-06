@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "./HeroSection.css";
 
@@ -22,6 +22,28 @@ const fadeUp = {
 
 export default function HeroSection({ openContactModal }) {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [imagesLoaded, setImagesLoaded] = useState(false);
+  const preloadedRef = useRef(false);
+
+  // Preload all hero images on mount
+  useEffect(() => {
+    if (preloadedRef.current) return;
+    preloadedRef.current = true;
+
+    let loaded = 0;
+    heroImages.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+      img.onload = () => {
+        loaded++;
+        if (loaded === heroImages.length) setImagesLoaded(true);
+      };
+      img.onerror = () => {
+        loaded++;
+        if (loaded === heroImages.length) setImagesLoaded(true);
+      };
+    });
+  }, []);
 
   const nextSlide = useCallback(() => {
     setCurrentIndex((prev) => (prev + 1) % heroImages.length);
@@ -34,17 +56,24 @@ export default function HeroSection({ openContactModal }) {
 
   return (
     <section className="hero" id="home">
+      {/* Preload all images as hidden elements for instant browser caching */}
+      <div className="hero__preload" aria-hidden="true">
+        {heroImages.map((src, i) => (
+          <img key={i} src={src} alt="" />
+        ))}
+      </div>
+
       {/* Background carousel */}
       <div className="hero__carousel">
-        <AnimatePresence mode="wait">
+        <AnimatePresence mode="popLayout">
           <motion.div
             key={currentIndex}
             className="hero__carousel-slide"
             style={{ backgroundImage: `url('${heroImages[currentIndex]}')` }}
-            initial={{ opacity: 0, scale: 1.08 }}
-            animate={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 1.2, ease: [0.25, 0.46, 0.45, 0.94] }}
+            transition={{ duration: 0.8, ease: "easeInOut" }}
           />
         </AnimatePresence>
       </div>
