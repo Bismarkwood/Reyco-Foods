@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage/HomePage";
 import AboutPage from "./pages/AboutPage/AboutPage";
+import GalleryPage from "./pages/GalleryPage/GalleryPage";
 import ScrollToHash from "./components/ScrollToHash/ScrollToHash";
 import ContactModal from "./components/ContactModal/ContactModal";
 
@@ -18,6 +19,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<HomePage openContactModal={openContactModal} />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/gallery" element={<GalleryPage openContactModal={openContactModal} />} />
       </Routes>
     </BrowserRouter>
   );

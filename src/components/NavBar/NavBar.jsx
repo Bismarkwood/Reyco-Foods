@@ -7,6 +7,7 @@ import "./NavBar.css";
 const navLinks = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
+  { name: "Gallery", href: "/gallery" },
 ];
 
 export default function NavBar({ openContactModal }) {
@@ -48,10 +49,6 @@ export default function NavBar({ openContactModal }) {
       transition={{ type: "spring", stiffness: 100, damping: 20 }}
     >
       <div className="nav-container">
-        <Link to="/" className="nav-logo-link">
-          <img src="/logo.png" alt="Ryeco Foods" className="nav-logo" />
-        </Link>
-
         <nav className="nav-menu">
           <ul className="nav-links">
             {navLinks.map((link) => (
@@ -63,6 +60,10 @@ export default function NavBar({ openContactModal }) {
             ))}
           </ul>
         </nav>
+
+        <Link to="/" className="nav-logo-link">
+          <img src="/logo.png" alt="Ryeco Foods" className="nav-logo" />
+        </Link>
 
         <div className="nav-right">
           <Link to="/#contact" className="nav-cta" onClick={handleContactClick}>

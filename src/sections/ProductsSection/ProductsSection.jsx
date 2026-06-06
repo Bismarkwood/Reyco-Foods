@@ -25,26 +25,23 @@ const fadeIn = (delay = 0) => ({
 const products = [
   {
     number: "01",
-    title: "Frozen Pork Cuts",
-    description: "Premium frozen pig feet, pig tails, and pork spareribs — expertly prepared and packed for export. Cold-chain quality guaranteed from source to destination across Africa.",
-    badge: "EXPORT READY",
-    image: "/frozen_pig_feet.png",
+    title: "Salted Pig Feet",
+    description: "Premium salted pig feet brined and stored in barrels for export. Ideal for hot climates.",
+    image: "/salted_pig_barrel.png",
     accent: "orange",
   },
   {
     number: "02",
-    title: "Beef, Mutton & Chicken",
-    description: "Frozen beef, mutton, chicken quarters, and chicken legs. Also includes frozen beef feet, beef sinews, beef neck, beef liver, and a full range of offal meats for diverse market demands.",
-    badge: "HIGH DEMAND",
-    image: "/frozen_beef_chicken.png",
+    title: "Salted Beef",
+    description: "Salted beef cuts stored in buckets, perfect for long shelf life without refrigeration.",
+    image: "/Salted Beef.png",
     accent: "orange",
   },
   {
     number: "03",
-    title: "Poultry, Offal & Sausages",
-    description: "Turkey legs, whole turkey, whole chicken, chicken gizzards, chicken liver, beef liver, and sausages — a complete frozen poultry and offal portfolio tailored for African markets.",
-    badge: "FAST MOVING",
-    image: "/frozen_offal_turkey.png",
+    title: "Salted Pigtail",
+    description: "Salted pork tail pieces stored in buckets, ready for export to African markets.",
+    image: "/Salted Pigtail.png",
     accent: "blue",
   },
 ];
@@ -103,8 +100,6 @@ export default function ProductsSection() {
                 loading="lazy"
               />
               <div className="products__card-image-overlay" />
-              <span className="products__card-badge">{product.badge}</span>
-              <span className="products__card-number">{product.number}</span>
             </div>
 
             {/* Content */}

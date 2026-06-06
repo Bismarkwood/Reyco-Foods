@@ -23,7 +23,7 @@ const fadeIn = (delay = 0) => ({
   },
 });
 
-const exportMarkets = ["Ghana", "Liberia", "Sierra Leone", "Caribbean Islands"];
+const exportMarkets = ["Ghana", "Liberia", "Sierra Leone", "Côte d'Ivoire", "Caribbean Islands"];
 
 const linkColumns = [
   {
@@ -274,7 +274,7 @@ export default function Footer() {
             animate={isInView ? "visible" : "hidden"}
           >
             <span className="footer__copyright">
-              © 2026 Ryeco Foods Ltd. All rights reserved.
+              © {new Date().getFullYear()} Ryeco Foods. All rights reserved.
             </span>
             <span className="footer__bottom-tag">
               Frozen Meat &amp; Offal Export — London, UK

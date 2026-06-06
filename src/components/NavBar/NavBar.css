@@ -30,6 +30,7 @@
 
 /* ─── Container ─── */
 .nav-container {
+  position: relative;
   width: 100%;
   max-width: 1240px;
   padding: 0 2rem;
@@ -41,15 +42,18 @@
 
 /* ─── Logo ─── */
 .nav-logo-link {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   align-items: center;
   text-decoration: none;
 }
 
 .nav-logo {
-  height: 86px;
+  height: 76px;
   width: auto;
-  max-width: 195px;
+  max-width: 240px;
   object-fit: contain;
   transition: transform 0.3s ease;
 }

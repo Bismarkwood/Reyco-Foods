@@ -59,6 +59,7 @@ const exportCountries = [
   { name: "Liberia", region: "West Africa", flag: "🇱🇷" },
   { name: "Sierra Leone", region: "West Africa", flag: "🇸🇱" },
   { name: "Caribbean Islands", region: "Caribbean", flag: "🏝️" },
+  { name: "Côte d'Ivoire", region: "West Africa", flag: "🇨🇮" },
 ];
 
 const certifications = [
@@ -242,13 +243,13 @@ export default function AboutPage() {
             animate={diffInView ? "visible" : "hidden"}
           >
             <img
-              src="/carousel_frozen_pork_cuts.png"
+              src="/Gallery Images/Frozen Pork Cuts.png"
               alt="Frozen pork cuts prepared for export"
               className="different-img"
             />
             <img
-              src="/ryeco_warehouse_1780437790543.png"
-              alt="Ryeco Foods cold store warehouse"
+              src="/Salted Pig Feet in Brine.png"
+              alt="Salted pig feet in brine barrels"
               className="different-img"
             />
           </motion.div>
@@ -292,7 +293,7 @@ export default function AboutPage() {
                 region: "West Africa",
                 code: "GH",
                 flag: "🇬🇭",
-                img: "/carousel_salted_pig_brine.png",
+                img: "/ghana_arch.png",
                 color: "#1f6b3b",
                 desc: "A key market for Salted Pig Feet in Brine and frozen meat supply built for hot-climate distribution.",
               },
@@ -301,7 +302,7 @@ export default function AboutPage() {
                 region: "West Africa",
                 code: "LR",
                 flag: "🇱🇷",
-                img: "/carousel_frozen_export_logistics.png",
+                img: "/liberia_flag.jpg",
                 color: "#e36a2e",
                 desc: "Reliable cold-chain exports for Liberian importers, wholesalers, and food service buyers.",
               },
@@ -310,16 +311,26 @@ export default function AboutPage() {
                 region: "West Africa",
                 code: "SL",
                 flag: "🇸🇱",
-                img: "/frozen_beef_chicken.png",
+                img: "/sierraleone_city.jpg",
                 color: "#1f6b3b",
                 desc: "Export-grade beef, poultry, pork, and offal products prepared for Sierra Leone's growing food trade.",
+              },
+              {
+                name: "Côte d'Ivoire",
+                region: "West Africa",
+                code: "CI",
+                flag: "🇨🇮",
+                img: "/cote_divoire_market.jpg",
+                color: "#E36A2E",
+                displayDesc: "Emerging market with demand for premium brined pork products.",
+                desc: "Growing consumer base for high-quality salted pig feet and frozen meats.",
               },
               {
                 name: "Caribbean Islands",
                 region: "Caribbean",
                 code: "CI",
                 flag: "🏝️",
-                img: "/frozen_offal_turkey.png",
+                img: "/caribbean_island.png",
                 color: "#E36A2E",
                 displayDesc: "Frozen poultry, turkey, offal, and brined products suitable for tropical market needs.",
                 desc: "Salted Pig Feet in Brine — engineered for tropical climates.",

@@ -1,6 +1,15 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useState, useEffect, useCallback } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import "./HeroSection.css";
+
+const heroImages = [
+  "/Gallery Images/Curing Tradition Zilla Salted Pig Feet in Brine.png",
+  "/Gallery Images/Frozen Pork Cuts.png",
+  "/Gallery Images/no 6.png",
+  "/Gallery Images/No. 02 Cold Chain.png",
+  "/CTA Banner Image.png",
+  "/Salted Pig Feet in Brine.png",
+];
 
 const fadeUp = {
   hidden: { opacity: 0, y: 18 },
@@ -12,8 +21,37 @@ const fadeUp = {
 };
 
 export default function HeroSection({ openContactModal }) {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const nextSlide = useCallback(() => {
+    setCurrentIndex((prev) => (prev + 1) % heroImages.length);
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(nextSlide, 5000);
+    return () => clearInterval(interval);
+  }, [nextSlide]);
+
   return (
     <section className="hero" id="home">
+      {/* Background carousel */}
+      <div className="hero__carousel">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentIndex}
+            className="hero__carousel-slide"
+            style={{ backgroundImage: `url('${heroImages[currentIndex]}')` }}
+            initial={{ opacity: 0, scale: 1.08 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1.2, ease: [0.25, 0.46, 0.45, 0.94] }}
+          />
+        </AnimatePresence>
+      </div>
+
+      {/* Overlay gradients */}
+      <div className="hero__overlay" />
+
       <div className="hero__inner">
         <motion.div
           className="hero__copy"
@@ -47,6 +85,18 @@ export default function HeroSection({ openContactModal }) {
             </button>
           </div>
         </motion.div>
+      </div>
+
+      {/* Slide indicators */}
+      <div className="hero__indicators">
+        {heroImages.map((_, i) => (
+          <button
+            key={i}
+            className={`hero__indicator${i === currentIndex ? " hero__indicator--active" : ""}`}
+            onClick={() => setCurrentIndex(i)}
+            aria-label={`Go to slide ${i + 1}`}
+          />
+        ))}
       </div>
     </section>
   );

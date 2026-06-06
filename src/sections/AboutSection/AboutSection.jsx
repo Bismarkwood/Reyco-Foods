@@ -25,7 +25,7 @@ const carouselItems = [
   },
   {
     type: "image",
-    image: "/carousel_salted_pig_brine.png",
+    image: "/Salted Pig Feet in Brine.png",
     alt: "Jars of salted pig feet in brine with green lids on a retail shelf",
   },
   // Frozen Pork Cuts
@@ -52,41 +52,29 @@ const carouselItems = [
     image: "/carousel_frozen_export_logistics.png",
     alt: "Frozen beef and mutton export boxes in cold storage warehouse",
   },
-  // Frozen Chicken
+  // Pork Ribs & Belly
   {
     type: "content",
-    title: "Frozen Chicken",
-    quote: "We supply frozen chicken quarters, chicken legs, and whole chicken — reliably sourced and delivered across Africa with full cold-chain integrity.",
+    title: "Pork Ribs & Belly",
+    quote: "We supply premium frozen pork ribs, loin, and belly cuts — reliably sourced and delivered across export markets with full cold-chain integrity.",
     color: "#1f6b3b",
   },
   {
     type: "image",
-    image: "https://images.unsplash.com/photo-1587593810167-a84920ea0781?auto=format&fit=crop&w=600&q=85",
-    alt: "Frozen chicken quarters and legs packaged for export",
+    image: "/meat_1.png",
+    alt: "Premium frozen pork ribs and belly cuts ready for export",
   },
-  // Offal Meats
+  // Pork
   {
     type: "content",
-    title: "Offal Meats",
-    quote: "A complete offal range — chicken gizzards, chicken liver, beef liver — processed to export standard and in high demand across African retail and wholesale markets.",
-    color: "#E36A2E",
-  },
-  {
-    type: "image",
-    image: "https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?auto=format&fit=crop&w=600&q=85",
-    alt: "Processed offal meats including gizzards and liver for export",
-  },
-  // Poultry — Turkey
-  {
-    type: "content",
-    title: "Poultry — Turkey",
-    quote: "Whole turkey, turkey legs, and turkey products exported frozen — consistently available and trusted by buyers across the African continent.",
+    title: "Pork",
+    quote: "Premium frozen pork cuts, pork ribs, trotters, and belly — processed to export standards and trusted by buyers across the African continent.",
     color: "#123f28",
   },
   {
     type: "image",
-    image: "https://images.unsplash.com/photo-1574672280600-4accfa5b6f98?auto=format&fit=crop&w=600&q=85",
-    alt: "Frozen turkey legs and whole turkey ready for export",
+    image: "/frozen_pig_feet.png",
+    alt: "Premium frozen pork cuts and trotters packaged for export",
   },
   // Cold Chain Logistics
   {
@@ -97,8 +85,8 @@ const carouselItems = [
   },
   {
     type: "image",
-    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=600&q=85",
-    alt: "Refrigerated shipping containers at a port ready for Africa export",
+    image: "https://images.unsplash.com/photo-1595246140625-573b715d11dc?auto=format&fit=crop&w=600&q=85",
+    alt: "Brine barrels stacked and ready for export",
   },
   // Africa Export Reach
   {
