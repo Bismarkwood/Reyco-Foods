@@ -51,9 +51,9 @@
 }
 
 .nav-logo {
-  height: 76px;
+  height: 100px;
   width: auto;
-  max-width: 240px;
+  max-width: 280px;
   object-fit: contain;
   transition: transform 0.3s ease;
 }

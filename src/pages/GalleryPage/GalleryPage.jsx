@@ -99,6 +99,15 @@ const lookbookSpreads = [
     caption: "Pig tails and cuts prepared for our signature barrel brine-curing process.",
     size: "portrait",
   },
+  {
+    id: 9,
+    label: "No. 09",
+    headline: "Market Day",
+    subtext: "African Market Trade",
+    url: "/Gallery Images/Market_woman.jpeg",
+    caption: "Our products reaching end consumers through vibrant local markets across West Africa.",
+    size: "wide",
+  },
 ];
 
 // Marquee images
@@ -319,6 +328,23 @@ export default function GalleryPage({ openContactModal }) {
             </div>
           </motion.div>
         </div>
+
+        {/* --- SPREAD 9: Market Woman full-bleed --- */}
+        <motion.div
+          className="lb-spread lb-spread--full"
+          variants={fadeUp(0.1)}
+          initial="hidden"
+          animate={editorialInView ? "visible" : "hidden"}
+          onClick={() => setLightboxIndex(8)}
+        >
+          <img src={lookbookSpreads[8].url} alt={lookbookSpreads[8].headline} />
+          <div className="lb-spread__overlay" />
+          <div className="lb-spread__info lb-spread__info--bottom-left">
+            <span className="lb-spread__label">{lookbookSpreads[8].label}</span>
+            <h3 className="lb-spread__headline">{lookbookSpreads[8].headline}</h3>
+            <p className="lb-spread__sub">{lookbookSpreads[8].subtext}</p>
+          </div>
+        </motion.div>
       </section>
 
       {/* ── 3. EDITORIAL STORY BLOCK ── */}

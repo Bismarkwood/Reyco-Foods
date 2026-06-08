@@ -19,8 +19,8 @@ const carouselItems = [
   // Salted Pig Feet in Brine
   {
     type: "content",
-    title: "Salted Pig Feet in Brine",
-    quote: "Ryeco Foods produces and exports high-quality Salted Pig Feet in Brine — made for hot climates with no refrigeration needed. Green-top lid with a shelf life of up to 18 months.",
+    title: "From Farm to Market",
+    quote: "Ryeco Foods manages the full journey from sourcing through to delivery, so you receive exactly what you expect, every time.",
     color: "#1f6b3b",
   },
   {
@@ -31,8 +31,8 @@ const carouselItems = [
   // Frozen Pork Cuts
   {
     type: "content",
-    title: "Frozen Pork Cuts",
-    quote: "We export frozen pig feet, pig tails, and pork spareribs — premium quality, cold-chain maintained, packed and ready for African markets.",
+    title: "Built for Export",
+    quote: "Our products are packaged and preserved to perform in hot climates, with shelf life and brine quality that set the benchmark.",
     color: "#E36A2E",
   },
   {
@@ -43,8 +43,8 @@ const carouselItems = [
   // Frozen Beef & Mutton
   {
     type: "content",
-    title: "Frozen Beef & Mutton",
-    quote: "Our frozen beef and mutton range includes beef cuts, beef feet, beef sinews, beef neck, and beef liver — export-grade and cold-chain certified.",
+    title: "Trusted Partners",
+    quote: "We work with a network of reliable producers and suppliers to guarantee supply continuity and product integrity.",
     color: "#123f28",
   },
   {
@@ -52,11 +52,11 @@ const carouselItems = [
     image: "/carousel_frozen_export_logistics.png",
     alt: "Frozen beef and mutton export boxes in cold storage warehouse",
   },
-  // Pork Ribs & Belly
+  // Sourced with Care
   {
     type: "content",
-    title: "Pork Ribs & Belly",
-    quote: "We supply premium frozen pork ribs, loin, and belly cuts — reliably sourced and delivered across export markets with full cold-chain integrity.",
+    title: "Sourced with Care",
+    quote: "Every product in our range is carefully selected and quality-checked before it reaches your shelf.",
     color: "#1f6b3b",
   },
   {
@@ -64,11 +64,11 @@ const carouselItems = [
     image: "/meat_1.png",
     alt: "Premium frozen pork ribs and belly cuts ready for export",
   },
-  // Pork
+  // Quality You Trust
   {
     type: "content",
-    title: "Pork",
-    quote: "Premium frozen pork cuts, pork ribs, trotters, and belly — processed to export standards and trusted by buyers across the African continent.",
+    title: "Quality You Trust",
+    quote: "Ryeco Foods delivers premium food products held to the highest standards of safety, freshness and consistency.",
     color: "#123f28",
   },
   {
@@ -76,29 +76,17 @@ const carouselItems = [
     image: "/frozen_pig_feet.png",
     alt: "Premium frozen pork cuts and trotters packaged for export",
   },
-  // Cold Chain Logistics
+  // Global Reach
   {
     type: "content",
-    title: "Cold Chain Logistics",
-    quote: "End-to-end cold chain management ensures every frozen product — from pork to poultry to offal — arrives at its African destination in perfect condition.",
+    title: "Global Reach",
+    quote: "We supply and export to markets across Africa, the Caribbean and beyond, connecting producers with buyers worldwide.",
     color: "#1f6b3b",
   },
   {
     type: "image",
     image: "https://images.unsplash.com/photo-1595246140625-573b715d11dc?auto=format&fit=crop&w=600&q=85",
     alt: "Brine barrels stacked and ready for export",
-  },
-  // Africa Export Reach
-  {
-    type: "content",
-    title: "Africa Export Reach",
-    quote: "From West Africa to East Africa, Ryeco Foods' frozen meat and Offal products reach markets continent-wide — building supply reliability for retailers and distributors.",
-    color: "#E36A2E",
-  },
-  {
-    type: "image",
-    image: "https://images.unsplash.com/photo-1494412651409-8963ce7935a7?auto=format&fit=crop&w=600&q=85",
-    alt: "Container ship transporting frozen meat exports to Africa",
   },
 ];
 

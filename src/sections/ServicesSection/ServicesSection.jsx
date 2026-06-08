@@ -39,7 +39,7 @@ const products = [
     description:
       "Our flagship product — premium salted pig feet packed in strong brine, specifically formulated for hot climates. No refrigeration needed. The iconic green-top lid seals in freshness and guarantees a shelf life of up to 18–24 months, making it export ready for regions without reliable cold-chain structures.",
     highlights: ["No Refrigeration Required", "18–24 Month Shelf Life", "Hot-Climate Formula", "Export Ready"],
-    image: "/Salted Pig Feet in Brine.png",
+    image: "/zilla.png",
     caption: "Zilla Green-Top · Premium Brine Formula",
     variant: "light",
     tag: "BEST SELLER",
