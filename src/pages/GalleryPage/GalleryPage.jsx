@@ -57,11 +57,11 @@ const lookbookSpreads = [
   {
     id: 4,
     label: "No. 04",
-    headline: "Cold Storage",
-    subtext: "London Warehouse Facility",
-    url: "/Gallery Images/Frozen Pork Cuts.png",
-    caption: "Our London cold storage hub — the beating heart of our UK-to-Africa supply chain.",
-    size: "square",
+    headline: "Market Day",
+    subtext: "African Market Trade",
+    url: "/Gallery Images/Market_woman.jpeg",
+    caption: "Our products reaching end consumers through vibrant local markets across West Africa.",
+    size: "portrait",
   },
   {
     id: 5,
@@ -102,10 +102,10 @@ const lookbookSpreads = [
   {
     id: 9,
     label: "No. 09",
-    headline: "Market Day",
-    subtext: "African Market Trade",
-    url: "/Gallery Images/Market_woman.jpeg",
-    caption: "Our products reaching end consumers through vibrant local markets across West Africa.",
+    headline: "Cold Storage",
+    subtext: "London Warehouse Facility",
+    url: "/Gallery Images/Frozen Pork Cuts.png",
+    caption: "Our London cold storage hub — the beating heart of our UK-to-Africa supply chain.",
     size: "wide",
   },
 ];

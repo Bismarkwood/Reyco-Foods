@@ -27,7 +27,7 @@ const products = [
     number: "01",
     title: "Salted Pig Feet",
     description: "Premium salted pig feet brined and stored in barrels for export. Ideal for hot climates.",
-    image: "/Salted Pig Feet.png",
+    image: "/Salted Pig Feet New.png",
     accent: "orange",
   },
   {
