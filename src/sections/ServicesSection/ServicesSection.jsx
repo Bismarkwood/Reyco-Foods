@@ -153,8 +153,8 @@ export default function ServicesSection() {
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
       >
-        <span className="services__tag">FROZEN MEAT EXPORT</span>
-        <h2 className="services__title">Frozen Meat Export to Africa & Beyond</h2>
+        <span className="services__tag">BRINE MEAT EXPORT</span>
+        <h2 className="services__title">Brine Meat Export to Africa & Beyond</h2>
         <motion.div
           className="services__title-line"
           initial={{ scaleX: 0 }}
@@ -162,7 +162,7 @@ export default function ServicesSection() {
           transition={{ duration: 0.6, delay: 0.4, ease: cineEase }}
         />
         <p className="services__intro">
-          Ryeco Foods exports frozen pig feet, pig tail and salted beef.
+          Ryeco Foods exports brine pig feet, pig tail and salted beef.
         </p>
       </motion.div>
 

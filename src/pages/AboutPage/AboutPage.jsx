@@ -44,8 +44,8 @@ const differentiators = [
     ),
   },
   {
-    title: "Full Frozen Meat Range",
-    text: "Beyond Salted Pig Feet, we export a comprehensive frozen meat portfolio — beef, mutton, pork, poultry, offal and sausages — to meet diverse African market demands.",
+    title: "Full Brine Meat Range",
+    text: "Beyond Salted Pig Feet, we export a comprehensive brine meat portfolio — beef, mutton, pork, poultry, offal and sausages — to meet diverse African market demands.",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
@@ -141,7 +141,7 @@ export default function AboutPage() {
             </h1>
             <p className="about-hero__sub">
               Ryeco Foods UK Ltd — bringing premium Salted Pig Feet in Brine and
-              frozen meat products from the United Kingdom to West Africa and the Caribbean.
+              brine meat products from the United Kingdom to West Africa and the Caribbean.
             </p>
 
 
@@ -180,8 +180,8 @@ export default function AboutPage() {
               </p>
               <p>
                 Building on our success with Salted Pig Feet, we have expanded our
-                portfolio to include the export of frozen meat cuts — bringing a full range
-                of high-quality frozen beef, pork, poultry, and offal products to Africa.
+                portfolio to include the export of brine meat cuts — bringing a full range
+                of high-quality brine beef, pork, poultry, and offal products to Africa.
               </p>
             </motion.div>
 
@@ -244,7 +244,7 @@ export default function AboutPage() {
           >
             <img
               src="/Gallery Images/Frozen Pork Cuts.png"
-              alt="Frozen pork cuts prepared for export"
+              alt="Brine pork cuts prepared for export"
               className="different-img"
             />
             <img
@@ -280,7 +280,7 @@ export default function AboutPage() {
               Where We <em>Ship</em> To
             </h2>
             <p className="countries-subtitle">
-              From the United Kingdom, Ryeco Foods supplies export-ready frozen meat,
+              From the United Kingdom, Ryeco Foods supplies export-ready brine meat,
               offal, and Salted Pig Feet in Brine to African trade partners and island markets.
             </p>
           </motion.div>
@@ -295,7 +295,7 @@ export default function AboutPage() {
                 flag: "🇬🇭",
                 img: "/ghana_arch.png",
                 color: "#1f6b3b",
-                desc: "A key market for Salted Pig Feet in Brine and frozen meat supply built for hot-climate distribution.",
+                desc: "A key market for Salted Pig Feet in Brine and brine meat supply built for hot-climate distribution.",
               },
               {
                 name: "Liberia",
@@ -323,7 +323,7 @@ export default function AboutPage() {
                 img: "/cote_divoire_market.jpg",
                 color: "#E36A2E",
                 displayDesc: "Emerging market with demand for premium brined pork products.",
-                desc: "Growing consumer base for high-quality salted pig feet and frozen meats.",
+                desc: "Growing consumer base for high-quality salted pig feet and brine meats.",
               },
               {
                 name: "Caribbean Islands",
@@ -332,7 +332,7 @@ export default function AboutPage() {
                 flag: "🏝️",
                 img: "/caribbean_island.png",
                 color: "#E36A2E",
-                displayDesc: "Frozen poultry, turkey, offal, and brined products suitable for tropical market needs.",
+                displayDesc: "Brine poultry, turkey, offal, and brined products suitable for tropical market needs.",
                 desc: "Salted Pig Feet in Brine — engineered for tropical climates.",
               },
             ].map((c, i) => (

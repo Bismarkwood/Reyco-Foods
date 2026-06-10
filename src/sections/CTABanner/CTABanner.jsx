@@ -138,7 +138,7 @@ export default function CTABanner({ openContactModal }) {
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
         >
-          Trusted UK exporter of salted and frozen meats to West Africa and the Caribbean.
+          Trusted UK exporter of salted and brine meats to West Africa and the Caribbean.
         </motion.p>
       </div>
     </section>

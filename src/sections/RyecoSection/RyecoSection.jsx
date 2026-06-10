@@ -7,7 +7,7 @@ const RyecoSection = () => (
       <div className="eyebrow">WHY RYECO FOODS</div>
       <h1 className="headline">Built for taste, shelf life, and regional supply.</h1>
       <p className="intro">
-        Ryeco Foods combines premium brine formulation, climate‑conscious preservation, and a complete frozen meat range to support food distributors, retailers, hospitality buyers, and regional markets across Africa.
+        Ryeco Foods combines premium brine formulation, climate‑conscious preservation, and a complete brine meat range to support food distributors, retailers, hospitality buyers, and regional markets across Africa.
       </p>
       <div className="features">
         <div className="feature">
@@ -43,7 +43,7 @@ const RyecoSection = () => (
       <img
         className="overlay-img"
         src="/ryeco_product_1780437816413.png"
-        alt="Premium frozen meat product"
+        alt="Premium brine meat product"
       />
       <div className="caption">Cold‑chain ready for Africa</div>
     </div>

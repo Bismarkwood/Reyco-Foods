@@ -40,9 +40,9 @@ const lookbookSpreads = [
     id: 2,
     label: "No. 02",
     headline: "Cold Chain",
-    subtext: "Premium Frozen Pig Feet",
+    subtext: "Premium Brine Pig Feet",
     url: "/Gallery Images/No. 02 Cold Chain.png",
-    caption: "Cleaned, portioned and flash-frozen pig feet ready for cold-chain export.",
+    caption: "Cleaned, portioned and brine pig feet ready for cold-chain export.",
     size: "tall",
   },
   {

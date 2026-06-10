@@ -3,7 +3,7 @@ import React from "react";
 import "./MarqueeBanner.css";
 
 const topItems = [
-  "Frozen Meat Export",
+  "Brine Meat Export",
   "Salted Pig Feet in Brine",
   "Pork, Beef & Poultry",
   "Offal Meat Supply",
