@@ -25,7 +25,7 @@ const carouselItems = [
   },
   {
     type: "image",
-    image: "/Quality you can trust card.png",
+    image: "/Quality You Can Trust.png",
     alt: "Inspector inspecting barrels in a warehouse",
   },
   // Global Reach
