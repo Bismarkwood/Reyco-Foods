@@ -39,7 +39,7 @@ const products = [
     description:
       "Our flagship product — premium salted pig feet packed in strong brine, specifically formulated for hot climates. No refrigeration needed. The iconic green-top lid seals in freshness and guarantees a shelf life of up to 18–24 months, making it export ready for regions without reliable cold-chain structures.",
     highlights: ["No Refrigeration Required", "18–24 Month Shelf Life", "Hot-Climate Formula", "Export Ready"],
-    image: "/Zilla Salted Beef.png",
+    image: "/Zilla Salted Pig Feet in Brine.png",
     caption: "Zilla Green-Top · Premium Brine Formula",
     variant: "light",
     tag: "BEST SELLER",
@@ -153,8 +153,8 @@ export default function ServicesSection() {
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
       >
-        <span className="services__tag">FEATURED PRODUCTS</span>
-        <h2 className="services__title">Premium Meat Exports by RycoFoods</h2>
+        <span className="services__tag">FROZEN MEAT EXPORT</span>
+        <h2 className="services__title">Frozen Meat Export to Africa & Beyond</h2>
         <motion.div
           className="services__title-line"
           initial={{ scaleX: 0 }}
@@ -162,10 +162,7 @@ export default function ServicesSection() {
           transition={{ duration: 0.6, delay: 0.4, ease: cineEase }}
         />
         <p className="services__intro">
-          Ryeco Foods are producers and exporters of high-quality Salted Pig Feet
-          in Brine — specifically made for hot climates without the need to
-          refrigerate. Our Zilla Salted Pig Feet with green-top lid carry a
-          long-life shelf life of up to 18–24 months.
+          Ryeco Foods exports frozen pig feet, pig tail and salted beef.
         </p>
       </motion.div>
 

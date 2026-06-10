@@ -3,12 +3,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import "./HeroSection.css";
 
 const heroImages = [
-  "/Gallery Images/Curing Tradition Zilla Salted Pig Feet in Brine.png",
-  "/Gallery Images/Frozen Pork Cuts.png",
-  "/Gallery Images/no 6.png",
-  "/Gallery Images/No. 02 Cold Chain.png",
-  "/CTA Banner Image.png",
-  "/Salted Pig Feet in Brine.png",
+  "/Zilla Salted Pig Feet in Brine.png",
+  "/Quality you can trust card.png",
+  "/Built for Export.png",
+  "/Trusted Partners.png",
+  "/Sourced with Care.png",
 ];
 
 const fadeUp = {
@@ -88,17 +87,12 @@ export default function HeroSection({ openContactModal }) {
           animate="visible"
           variants={fadeUp}
         >
-          <p className="hero__eyebrow">UK frozen meat export</p>
+          <p className="hero__eyebrow">PIG FEET EXPORT</p>
           <h1 className="hero__title">
-            Reliable frozen meat supply <br /> for African markets.
+            Producers of salted pig feet.
           </h1>
           <p className="hero__text">
-            Ryeco Foods sources, prepares, and exports premium frozen meat and offal,
-            ensuring the highest quality standards from the UK to West Africa and the Caribbean.
-          </p>
-          <p className="hero__text">
-            With dependable, temperature-controlled cold-chain logistics, we guarantee
-            that our products arrive fresh, safe, and ready to meet the demands of your market.
+            Ryeco Foods are producers and exporters of high-quality Salted Pig Feet in Brine specifically made for hot climate without the need to refrigerate. Our Salted Pig Feet in strong brine with green-top lid has a longer shelf life of up to 18 months.
           </p>
 
           <div className="hero__actions">

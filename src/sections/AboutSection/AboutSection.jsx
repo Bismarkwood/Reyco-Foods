@@ -16,77 +16,65 @@ const fadeUp = (delay = 0) => ({
 
 // Cards: content card followed by image card, alternating
 const carouselItems = [
-  // Salted Pig Feet in Brine
+  // Quality You Can Trust
   {
     type: "content",
-    title: "From Farm to Market",
-    quote: "Ryeco Foods manages the full journey from sourcing through to delivery, so you receive exactly what you expect, every time.",
+    title: "Quality You Can Trust",
+    quote: "Ryeco Foods delivers premium brine meat products.",
     color: "#1f6b3b",
   },
   {
     type: "image",
-    image: "/Salted Pig Feet in Brine.png",
-    alt: "Jars of salted pig feet in brine with green lids on a retail shelf",
+    image: "/Quality you can trust card.png",
+    alt: "Inspector inspecting barrels in a warehouse",
   },
-  // Frozen Pork Cuts
+  // Global Reach
   {
     type: "content",
-    title: "Built for Export",
-    quote: "Our products are packaged and preserved to perform in hot climates, with shelf life and brine quality that set the benchmark.",
+    title: "Global Reach",
+    quote: "We export to markets across Africa and beyond.",
     color: "#E36A2E",
   },
   {
     type: "image",
-    image: "/carousel_frozen_pork_cuts.png",
-    alt: "Vacuum-packed frozen pork spareribs and pig tails for export",
+    image: "/Global Reach.png",
+    alt: "World map showing global export routes",
   },
-  // Frozen Beef & Mutton
+  // Built for Export
   {
     type: "content",
-    title: "Trusted Partners",
-    quote: "We work with a network of reliable producers and suppliers to guarantee supply continuity and product integrity.",
+    title: "Built for Export",
+    quote: "Our products are packaged and preserved to perform in hot climates, with shelf life and brine quality that set the benchmark.",
     color: "#123f28",
   },
   {
     type: "image",
-    image: "/carousel_frozen_export_logistics.png",
-    alt: "Frozen beef and mutton export boxes in cold storage warehouse",
+    image: "/Built for Export.png",
+    alt: "Cargo being loaded into a truck for export",
+  },
+  // Trusted Partners
+  {
+    type: "content",
+    title: "Trusted Partners",
+    quote: "We work with a reliable network of meat processors and suppliers in the United Kingdom and mainland Europe to guarantee supply continuity and product integrity.",
+    color: "#1f6b3b",
+  },
+  {
+    type: "image",
+    image: "/Trusted Partners.png",
+    alt: "Two people shaking hands in a warehouse",
   },
   // Sourced with Care
   {
     type: "content",
     title: "Sourced with Care",
     quote: "Every product in our range is carefully selected and quality-checked before it reaches your shelf.",
-    color: "#1f6b3b",
+    color: "#E36A2E",
   },
   {
     type: "image",
-    image: "/meat_1.png",
-    alt: "Premium frozen pork ribs and belly cuts ready for export",
-  },
-  // Quality You Trust
-  {
-    type: "content",
-    title: "Quality You Trust",
-    quote: "Ryeco Foods delivers premium food products held to the highest standards of safety, freshness and consistency.",
-    color: "#123f28",
-  },
-  {
-    type: "image",
-    image: "/frozen_pig_feet.png",
-    alt: "Premium frozen pork cuts and trotters packaged for export",
-  },
-  // Global Reach
-  {
-    type: "content",
-    title: "Global Reach",
-    quote: "We supply and export to markets across Africa, the Caribbean and beyond, connecting producers with buyers worldwide.",
-    color: "#1f6b3b",
-  },
-  {
-    type: "image",
-    image: "https://images.unsplash.com/photo-1595246140625-573b715d11dc?auto=format&fit=crop&w=600&q=85",
-    alt: "Brine barrels stacked and ready for export",
+    image: "/Sourced with Care.png",
+    alt: "Workers preparing products in a facility",
   },
 ];
 
@@ -110,13 +98,13 @@ export default function AboutSection() {
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
       >
-        <span className="about__tag">ABOUT RYCOFOODS</span>
+        <span className="about__tag">ABOUT RYECO FOODS</span>
         <h2 className="about__title">
-          Company Brief Section
+          Company Brief
         </h2>
         <div className="about__title-line" />
         <p className="about__intro">
-          Ryeco foods are producers and exporters of high-quality Salted Pig Feet in Brine specifically made for hot climate without the need to refrigerate. Our Salted Pig Feet in strong brine with green-top lid has a longer shelf life of up to 18 months and we also export frozen meat and Offal.
+          Ryeco Foods are producers and exporters of high-quality Salted Pig Feet in Brine specifically made for hot climate without the need to refrigerate. Our Salted Pig Feet in strong brine with green-top lid has a longer shelf life of up to 18 months.
         </p>
       </motion.div>
 

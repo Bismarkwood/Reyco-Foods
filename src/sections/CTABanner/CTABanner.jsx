@@ -97,20 +97,9 @@ export default function CTABanner({ openContactModal }) {
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
         >
-          Let's Move Your Products{" "}
-          <em className="cta-banner__heading-italic">From Source to Shelf.</em>
+          Let's Supply You{" "}
+          <em className="cta-banner__heading-italic">Premium Meat.</em>
         </motion.h2>
-
-        <motion.p
-          className="cta-banner__text"
-          variants={fadeUp(1.0)}
-          initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
-        >
-          Whether you are a brand looking for distribution, a retailer seeking
-          reliable supply, or a partner exploring collaboration, Ryeco Foods is
-          ready to connect.
-        </motion.p>
 
         <motion.form
           className="cta-banner__form"
