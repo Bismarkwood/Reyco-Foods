@@ -4,7 +4,7 @@ import "./HeroSection.css";
 
 const heroImages = [
   "/Zilla Salted Pig Feet in Brine.png",
-  "/Quality you can trust card.png",
+  "/Quality You Can Trust.png",
   "/Built for Export.png",
   "/Trusted Partners.png",
   "/Sourced with Care.png",
