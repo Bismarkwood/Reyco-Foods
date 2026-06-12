@@ -361,8 +361,7 @@
 
 .different-img {
   width: 100%;
-  height: 260px;
-  object-fit: cover;
+  height: auto;
   border-radius: 20px;
   display: block;
   opacity: 0.75;
@@ -378,7 +377,7 @@
   position: relative;
   background: #0b2f1e;
   overflow: hidden;
-  padding: 8rem 0 0;
+  padding: 8rem 0 6rem;
 }
 
 /* Glow orbs */

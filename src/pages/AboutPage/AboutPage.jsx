@@ -45,7 +45,7 @@ const differentiators = [
   },
   {
     title: "Full Brine Meat Range",
-    text: "Beyond Salted Pig Feet, we export a comprehensive brine meat portfolio — beef, mutton, pork, poultry, offal and sausages — to meet diverse African market demands.",
+    text: "Beyond Salted Pig Feet, we export Pig Tails and Salted Beef to meet diverse market demands.",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
@@ -192,8 +192,8 @@ export default function AboutPage() {
               animate={storyInView ? "visible" : "hidden"}
             >
               <img
-                src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=85"
-                alt="Premium meat products prepared for export"
+                src="/Quality You Can Trust.png"
+                alt="Warehouse with barrels of salted pig feet"
                 className="story-img"
               />
               <div className="story-img-badge">
