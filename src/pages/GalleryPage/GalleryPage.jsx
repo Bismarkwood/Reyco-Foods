@@ -32,26 +32,26 @@ const lookbookSpreads = [
     label: "No. 01",
     headline: "Curing Tradition",
     subtext: "Zilla Salted Pig Feet in Brine",
-    url: "/Gallery Images/Curing Tradition Zilla Salted Pig Feet in Brine.png",
+    url: "/Zilla Salted Pig Feet in Brine.png",
     caption: "Green-top barrels packed with our proprietary brine formula — lasting 18–24 months in hot climates without refrigeration.",
     size: "hero",
   },
   {
     id: 2,
     label: "No. 02",
-    headline: "Cold Chain",
-    subtext: "Premium Brine Pig Feet",
-    url: "/Gallery Images/No. 02 Cold Chain.png",
-    caption: "Cleaned, portioned and brine pig feet ready for cold-chain export.",
+    headline: "The Warehouse",
+    subtext: "Quality Inspection",
+    url: "/Sourced with Care.png",
+    caption: "Our warehouse facility where every barrel is inspected before export.",
     size: "tall",
   },
   {
     id: 3,
     label: "No. 03",
-    headline: "The Cut",
-    subtext: "Spareribs & Pork Cuts",
-    url: "/Gallery Images/No. 03 The Cut.png",
-    caption: "Export-grade pork spareribs prepared at our UK partner butcheries.",
+    headline: "Built for Export",
+    subtext: "Loading & Logistics",
+    url: "/Built for Export.png",
+    caption: "Barrels being loaded onto trucks for delivery to ports.",
     size: "wide",
   },
   {
@@ -68,58 +68,49 @@ const lookbookSpreads = [
     label: "No. 05",
     headline: "Barrel Trade",
     subtext: "Brine Curing Process",
-    url: "/Gallery Images/No. 05 Barrel Trade.png",
-    caption: "Heritage barrel stacking — our brine formula sealed and ready for export.",
+    url: "/Salted Pig Feet.png",
+    caption: "Salted pig feet sealed in barrels ready for export.",
     size: "portrait",
   },
   {
     id: 6,
     label: "No. 06",
-    headline: "Global Reach",
-    subtext: "Export Logistics",
-    url: "/Gallery Images/no 6.png",
-    caption: "Refrigerated containers loaded for West Africa and Caribbean ports of call.",
+    headline: "Trusted Partners",
+    subtext: "Supply Network",
+    url: "/Trusted Partners.png",
+    caption: "Working with reliable meat processors and suppliers across the UK and Europe.",
     size: "wide",
   },
   {
     id: 7,
     label: "No. 07",
-    headline: "Pork Craft",
-    subtext: "Raw Pork Preparation",
-    url: "/Gallery Images/no 7.png",
-    caption: "Carefully prepared pork sections ahead of freezing and packaging.",
+    headline: "Sourced with Care",
+    subtext: "Barrel Sealing",
+    url: "/Sourced with Care.png",
+    caption: "Every product carefully selected and quality-checked before export.",
     size: "square",
   },
   {
     id: 8,
     label: "No. 08",
-    headline: "The Barrel",
-    subtext: "Brine-Cured Pig Tail",
-    url: "/Gallery Images/No. 08.png",
-    caption: "Pig tails and cuts prepared for our signature barrel brine-curing process.",
+    headline: "The Process",
+    subtext: "Brine Preparation",
+    url: "/Gallery Images/The Process.png",
+    caption: "Our signature brine curing process in action.",
     size: "portrait",
-  },
-  {
-    id: 9,
-    label: "No. 09",
-    headline: "Cold Storage",
-    subtext: "London Warehouse Facility",
-    url: "/Gallery Images/Frozen Pork Cuts.png",
-    caption: "Our London cold storage hub — the beating heart of our UK-to-Africa supply chain.",
-    size: "wide",
   },
 ];
 
 // Marquee images
 const marqueeImages = [
-  "/Gallery Images/Curing Tradition Zilla Salted Pig Feet in Brine.png",
-  "/Gallery Images/No. 02 Cold Chain.png",
-  "/Gallery Images/No. 03 The Cut.png",
+  "/Zilla Salted Pig Feet in Brine.png",
+  "/Quality You Can Trust.png",
+  "/Built for Export.png",
+  "/Trusted Partners.png",
+  "/Sourced with Care.png",
+  "/Gallery Images/The Process.png",
   "/Gallery Images/No. 05 Barrel Trade.png",
-  "/Gallery Images/no 6.png",
-  "/Gallery Images/no 7.png",
-  "/Salted Pig Feet in Brine.png",
-  "/salted_pig_barrel.png",
+  "/Gallery Images/Market_woman.jpeg",
 ];
 
 export default function GalleryPage({ openContactModal }) {
@@ -174,7 +165,7 @@ export default function GalleryPage({ openContactModal }) {
       <section className="lb-hero" ref={heroRef}>
         <motion.div
           className="lb-hero__bg"
-          style={{ backgroundImage: "url('/Gallery Images/Curing Tradition Zilla Salted Pig Feet in Brine.png')" }}
+          style={{ backgroundImage: "url('/Zilla Salted Pig Feet in Brine.png')" }}
           initial={{ scale: 1.12, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 2, ease: cineEase }}
@@ -242,12 +233,6 @@ export default function GalleryPage({ openContactModal }) {
           onClick={() => setLightboxIndex(0)}
         >
           <img src={lookbookSpreads[0].url} alt={lookbookSpreads[0].headline} />
-          <div className="lb-spread__overlay" />
-          <div className="lb-spread__info lb-spread__info--bottom-left">
-            <span className="lb-spread__label">{lookbookSpreads[0].label}</span>
-            <h3 className="lb-spread__headline">{lookbookSpreads[0].headline}</h3>
-            <p className="lb-spread__sub">{lookbookSpreads[0].subtext}</p>
-          </div>
         </motion.div>
 
         {/* --- SPREAD 2+3: Side-by-side --- */}
@@ -262,12 +247,6 @@ export default function GalleryPage({ openContactModal }) {
               onClick={() => setLightboxIndex(item.id - 1)}
             >
               <img src={item.url} alt={item.headline} />
-              <div className="lb-spread__overlay" />
-              <div className="lb-spread__info">
-                <span className="lb-spread__label">{item.label}</span>
-                <h3 className="lb-spread__headline">{item.headline}</h3>
-                <p className="lb-spread__sub">{item.subtext}</p>
-              </div>
             </motion.div>
           ))}
         </div>
@@ -284,12 +263,6 @@ export default function GalleryPage({ openContactModal }) {
               onClick={() => setLightboxIndex(item.id - 1)}
             >
               <img src={item.url} alt={item.headline} />
-              <div className="lb-spread__overlay" />
-              <div className="lb-spread__info">
-                <span className="lb-spread__label">{item.label}</span>
-                <h3 className="lb-spread__headline">{item.headline}</h3>
-                <p className="lb-spread__sub">{item.subtext}</p>
-              </div>
             </motion.div>
           ))}
         </div>
@@ -304,12 +277,6 @@ export default function GalleryPage({ openContactModal }) {
             onClick={() => setLightboxIndex(6)}
           >
             <img src={lookbookSpreads[6].url} alt={lookbookSpreads[6].headline} />
-            <div className="lb-spread__overlay" />
-            <div className="lb-spread__info">
-              <span className="lb-spread__label">{lookbookSpreads[6].label}</span>
-              <h3 className="lb-spread__headline">{lookbookSpreads[6].headline}</h3>
-              <p className="lb-spread__sub">{lookbookSpreads[6].subtext}</p>
-            </div>
           </motion.div>
 
           <motion.div
@@ -320,31 +287,8 @@ export default function GalleryPage({ openContactModal }) {
             onClick={() => setLightboxIndex(7)}
           >
             <img src={lookbookSpreads[7].url} alt={lookbookSpreads[7].headline} />
-            <div className="lb-spread__overlay" />
-            <div className="lb-spread__info">
-              <span className="lb-spread__label">{lookbookSpreads[7].label}</span>
-              <h3 className="lb-spread__headline">{lookbookSpreads[7].headline}</h3>
-              <p className="lb-spread__sub">{lookbookSpreads[7].subtext}</p>
-            </div>
           </motion.div>
         </div>
-
-        {/* --- SPREAD 9: Market Woman full-bleed --- */}
-        <motion.div
-          className="lb-spread lb-spread--full"
-          variants={fadeUp(0.1)}
-          initial="hidden"
-          animate={editorialInView ? "visible" : "hidden"}
-          onClick={() => setLightboxIndex(8)}
-        >
-          <img src={lookbookSpreads[8].url} alt={lookbookSpreads[8].headline} />
-          <div className="lb-spread__overlay" />
-          <div className="lb-spread__info lb-spread__info--bottom-left">
-            <span className="lb-spread__label">{lookbookSpreads[8].label}</span>
-            <h3 className="lb-spread__headline">{lookbookSpreads[8].headline}</h3>
-            <p className="lb-spread__sub">{lookbookSpreads[8].subtext}</p>
-          </div>
-        </motion.div>
       </section>
 
       {/* ── 3. EDITORIAL STORY BLOCK ── */}
@@ -416,7 +360,7 @@ export default function GalleryPage({ openContactModal }) {
       <section className="lb-cta" ref={ctaRef}>
         <motion.div
           className="lb-cta__bg"
-          style={{ backgroundImage: "url('/Gallery Images/no 6.png')" }}
+          style={{ backgroundImage: "url('/Trusted Partners.png')" }}
           initial={{ scale: 1.08 }}
           animate={ctaInView ? { scale: 1 } : { scale: 1.08 }}
           transition={{ duration: 1.5, ease: cineEase }}
