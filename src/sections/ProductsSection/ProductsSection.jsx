@@ -27,7 +27,7 @@ const products = [
     number: "01",
     title: "Salted Pig Feet",
     description: "Premium salted pig feet brined and stored in barrels for export. Ideal for hot climates.",
-    image: "/Salted Pig Feet gree.png",
+    image: "/Salted Pig Feet.jpg",
     accent: "orange",
   },
   {
@@ -41,7 +41,7 @@ const products = [
     number: "03",
     title: "Salted Pigtail",
     description: "Salted pork tail pieces stored in buckets, ready for export to African markets.",
-    image: "/Salted Pigtail.png",
+    image: "/Salted Pigtail.jpg",
     accent: "blue",
   },
 ];
