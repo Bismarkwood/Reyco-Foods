@@ -243,13 +243,13 @@ export default function AboutPage() {
             animate={diffInView ? "visible" : "hidden"}
           >
             <img
-              src="/Gallery Images/Frozen Pork Cuts.png"
-              alt="Brine pork cuts prepared for export"
+              src="/Salted Pig Feet.png"
+              alt="Salted pig feet product"
               className="different-img"
             />
             <img
-              src="/Salted Pig Feet in Brine.png"
-              alt="Salted pig feet in brine barrels"
+              src="/Salted Pigtail.png"
+              alt="Salted pigtail product"
               className="different-img"
             />
           </motion.div>
