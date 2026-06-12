@@ -39,11 +39,9 @@ const linkColumns = [
   {
     title: "Export Products",
     links: [
-      { label: "Brine Pork Cuts", href: "/#products" },
-      { label: "Brine Beef & Mutton", href: "/#products" },
-      { label: "Brine Chicken", href: "/#products" },
-      { label: "Offal Meats", href: "/#products" },
-      { label: "Salted Pig Feet in Brine", href: "/#products" },
+      { label: "Salted Pigfeet", href: "/#products" },
+      { label: "Salted Pigtails", href: "/#products" },
+      { label: "Salted Beef", href: "/#products" },
     ],
   },
 ];
@@ -92,10 +90,10 @@ export default function Footer() {
                 <span className="footer__brand-tag">BRINE MEAT EXPORT — UK &amp; AFRICA</span>
               </div>
 
-              <h3 className="footer__cta-heading">Ready to trade with Africa?</h3>
+              <h3 className="footer__cta-heading">Ready to trade with Ryeco?</h3>
               <p className="footer__cta-sub">
-                Ryeco Foods exports premium brine meat and offal to Ghana, Liberia,
-                Sierra Leone, and the Caribbean Islands.
+                Ryeco Foods export premium Salted meat to Ghana, Liberia,
+                Sierra Leone, Ivory Coast and the Caribbean Islands.
               </p>
 
               {/* Export markets */}

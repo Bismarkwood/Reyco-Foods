@@ -87,12 +87,13 @@
 .footer__ghost-text {
   font-family: 'Manrope', sans-serif;
   font-weight: 900;
-  font-size: clamp(5rem, 12vw, 10rem);
+  font-size: clamp(4rem, 10vw, 8rem);
   color: transparent;
   -webkit-text-stroke: 1px rgba(255, 255, 255, 0.025);
   text-transform: uppercase;
   letter-spacing: 0.03em;
   user-select: none;
+  white-space: nowrap;
 }
 
 .footer__ghost-dot {
@@ -545,13 +546,14 @@
 .footer__brand-text {
   font-family: 'Manrope', sans-serif;
   font-weight: 900;
-  font-size: clamp(4rem, 14vw, 12rem);
+  font-size: clamp(3rem, 12vw, 10rem);
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 0.03em;
   margin: 0;
-  line-height: 0.85;
+  line-height: 1;
   opacity: 0.92;
+  white-space: nowrap;
 }
 
 /* ─── Divider ─── */
