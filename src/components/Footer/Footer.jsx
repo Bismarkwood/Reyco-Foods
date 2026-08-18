@@ -161,11 +161,14 @@ export default function Footer() {
                 <ul className="footer__col-list footer__col-list--contact">
                   <li>
                     <span className="footer__contact-label">Address</span>
-                    <span className="footer__contact-val">128 City Road, London EC1V 2NX</span>
+                    <span className="footer__contact-val">Unit 30 Vastre Industrial Estate, SY16 1DZ, Newtown, Powys, Wales</span>
                   </li>
                   <li>
                     <span className="footer__contact-label">Phone</span>
-                    <a href="tel:+447908183169" className="footer__contact-val footer__contact-link">+44 7908 183 169</a>
+                    <div>
+                      <a href="tel:+447908183169" className="footer__contact-val footer__contact-link">+44 7908 183 169</a>
+                      <div className="footer__contact-role" style={{ fontSize: "0.85em", color: "#888", marginTop: "4px" }}>Director of Business Development &amp; Marketing</div>
+                    </div>
                   </li>
                   <li>
                     <span className="footer__contact-label">WhatsApp</span>
@@ -275,7 +278,7 @@ export default function Footer() {
               © {new Date().getFullYear()} Ryeco Foods. All rights reserved.
             </span>
             <span className="footer__bottom-tag">
-              Brine Meat &amp; Offal Export — London, UK
+              Brine Meat &amp; Offal Export — Wales, UK
             </span>
             <div className="footer__bottom-links">
               <a href="#" className="footer__bottom-link">Privacy Policy</a>

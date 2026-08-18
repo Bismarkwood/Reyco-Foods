@@ -34,16 +34,29 @@ const products = [
   {
     number: "01",
     badge: "SIGNATURE PRODUCT",
-    title: "Zilla Salted Pig Feet in Brine",
+    title: "Zillana Salted Pig Feet in Brine",
     subtitle: "",
     description:
-      "Our flagship product Zilla is specifically formulated for hot climates. No refrigeration needed.",
-    highlights: ["No Refrigeration Required", "18–24 Month Shelf Life", "Hot-Climate Formula", "Export Ready"],
+      "Our flagship product Zillana is specifically formulated for hot climates. No refrigeration needed.",
+    highlights: ["No Refrigeration Required", "18 Month Shelf Life", "Hot-Climate Formula", "Export Ready"],
     image: "/Zilla Salted Pig Feet in Brine.png",
-    caption: "Zilla Green-Top · Premium Brine Formula",
+    caption: "Zillana Green-Top · Premium Brine Formula",
     variant: "light",
     tag: "BEST SELLER",
   },
+  {
+    number: "02",
+    badge: "EXPORT READY",
+    title: "Salted Beef in Barrel",
+    subtitle: "",
+    description:
+      "Salted beef cuts stored in barrels, perfect for long shelf life without refrigeration.",
+    highlights: ["No Refrigeration Required", "18 Month Shelf Life", "Hot-Climate Formula", "Export Ready"],
+    image: "/Salted Beef Green.png",
+    caption: "Premium Beef · Export Grade",
+    variant: "light",
+    tag: "EXPORT",
+  }
 ];
 
 function ProductPanel({ product }) {

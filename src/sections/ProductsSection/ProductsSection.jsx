@@ -25,15 +25,15 @@ const fadeIn = (delay = 0) => ({
 const products = [
   {
     number: "01",
-    title: "Salted Pig Feet",
+    title: "Salted Pig Feet in Brine",
     description: "Premium salted pig feet brined and stored in barrels for export. Ideal for hot climates.",
     image: "/Salted Pig Feet.png",
     accent: "orange",
   },
   {
     number: "02",
-    title: "Salted Beef",
-    description: "Salted beef cuts stored in buckets, perfect for long shelf life without refrigeration.",
+    title: "Salted Beef in Barrel",
+    description: "Salted beef cuts stored in barrels, perfect for long shelf life without refrigeration.",
     image: "/Salted Beef Green.png",
     accent: "orange",
   },

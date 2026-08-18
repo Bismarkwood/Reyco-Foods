@@ -31,9 +31,9 @@ const lookbookSpreads = [
     id: 1,
     label: "No. 01",
     headline: "Curing Tradition",
-    subtext: "Zilla Salted Pig Feet in Brine",
+    subtext: "Zillana Salted Pig Feet in Brine",
     url: "/Zilla Salted Pig Feet in Brine.png",
-    caption: "Green-top barrels packed with our proprietary brine formula — lasting 18–24 months in hot climates without refrigeration.",
+    caption: "Green-top barrels packed with our proprietary brine formula — lasting 18 months in hot climates without refrigeration.",
     size: "hero",
   },
   {
@@ -197,7 +197,7 @@ export default function GalleryPage({ openContactModal }) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.75, ease: cineEase }}
           >
-            An editorial journey through Ryeco Foods — from the curing barrel to the cold store, and the London dock to West Africa.
+            An editorial journey through Ryeco Foods — from the curing barrel to the cold store, and the UK dock to West Africa.
           </motion.p>
 
           <motion.div
@@ -302,7 +302,7 @@ export default function GalleryPage({ openContactModal }) {
           >
             <img
               src="/Gallery Images/The Process.png"
-              alt="Zilla Brine Barrels"
+              alt="Zillana Brine Barrels"
               className="lb-story__img"
             />
             <div className="lb-story__img-accent" />
@@ -319,10 +319,10 @@ export default function GalleryPage({ openContactModal }) {
               Cured in Brine.<br /><em>Sealed for Continents.</em>
             </h2>
             <p className="lb-story__body">
-              Our flagship Zilla Salted Pig Feet are packed using a proprietary brine formula, hermetically sealed in iconic green-top barrels. Engineered for markets in West Africa and the Caribbean where cold-chain infrastructure is limited, each barrel guarantees 18–24 months of shelf life — no freezing required.
+              Our flagship Zillana Salted Pig Feet are packed using a proprietary brine formula, hermetically sealed in iconic green-top barrels. Engineered for markets in West Africa and the Caribbean where cold-chain infrastructure is limited, each barrel guarantees 18 months of shelf life — no freezing required.
             </p>
             <blockquote className="lb-story__quote">
-              &ldquo;From London to the markets of Ghana, Liberia, Sierra Leone, Côte d'Ivoire and the Caribbean — since 2022.&rdquo;
+              &ldquo;From Wales to the markets of Ghana, Liberia, Sierra Leone, Côte d'Ivoire and the Caribbean — since 2022.&rdquo;
             </blockquote>
           </motion.div>
         </div>
@@ -381,7 +381,7 @@ export default function GalleryPage({ openContactModal }) {
             initial="hidden"
             animate={ctaInView ? "visible" : "hidden"}
           >
-            Explore our full range of export-grade meat products or contact our London office to discuss trading partnerships.
+            Explore our full range of export-grade meat products or contact our Wales office to discuss trading partnerships.
           </motion.p>
           <motion.div
             className="lb-cta__buttons"

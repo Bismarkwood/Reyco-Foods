@@ -132,7 +132,7 @@ export default function AboutPage() {
           >
             <div className="about-hero__tag">
               <span className="about-hero__tag-dot" />
-              Established 2022 · London, UK
+              Established 2022 · Wales, UK
             </div>
             <h1 className="about-hero__title">
               Producers &amp;<br />
@@ -198,7 +198,7 @@ export default function AboutPage() {
               />
               <div className="story-img-badge">
                 <div className="story-img-badge__num">2022</div>
-                <div className="story-img-badge__label">Est. London, UK</div>
+                <div className="story-img-badge__label">Est. Wales, UK</div>
               </div>
             </motion.div>
           </div>
@@ -410,16 +410,6 @@ export default function AboutPage() {
                 <div className="cert-icon">{cert.icon}</div>
                 <h3 className="cert-card__title">{cert.title}</h3>
                 <p className="cert-card__text">{cert.text}</p>
-                
-                <div style={{ marginTop: "auto" }}>
-                  <div className="cert-status">
-                    <span className="cert-status__dot" />
-                    {cert.status}
-                  </div>
-                  <div style={{ marginTop: "12px", fontSize: "0.82rem", color: "#888", fontWeight: "600", textTransform: "uppercase", letterSpacing: "0.08em" }}>
-                    {cert.stage}
-                  </div>
-                </div>
               </motion.div>
             ))}
           </div>
