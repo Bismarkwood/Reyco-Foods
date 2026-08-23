@@ -25,23 +25,26 @@ const fadeIn = (delay = 0) => ({
 const products = [
   {
     number: "01",
-    title: "Salted Pig Feet in Brine",
-    description: "Premium salted pig feet brined and stored in barrels for export. Ideal for hot climates.",
-    image: "/Salted Pig Feet (2).png",
+    title: "Frozen Pork Cuts",
+    description: "Premium frozen pig feet, pig tails, and pork spareribs — expertly prepared and packed for export. Cold-chain quality guaranteed from source to destination across Africa.",
+    badge: "EXPORT READY",
+    image: "/frozen_pig_feet.png",
     accent: "orange",
   },
   {
     number: "02",
-    title: "Salted Beef in Barrel",
-    description: "Salted beef cuts stored in barrels, perfect for long shelf life without refrigeration.",
-    image: "/Salted Beef Green.png",
+    title: "Beef, Mutton & Chicken",
+    description: "Frozen beef, mutton, chicken quarters, and chicken legs. Also includes frozen beef feet, beef sinews, beef neck, beef liver, and a full range of offal meats for diverse market demands.",
+    badge: "HIGH DEMAND",
+    image: "/frozen_beef_chicken.png",
     accent: "orange",
   },
   {
     number: "03",
-    title: "Salted Pigtail",
-    description: "Salted pork tail pieces stored in buckets, ready for export to African markets.",
-    image: "/Salted Pigtail.png",
+    title: "Poultry, Offal & Sausages",
+    description: "Turkey legs, whole turkey, whole chicken, chicken gizzards, chicken liver, beef liver, and sausages — a complete frozen poultry and offal portfolio tailored for African markets.",
+    badge: "FAST MOVING",
+    image: "/frozen_offal_turkey.png",
     accent: "blue",
   },
 ];
@@ -65,9 +68,9 @@ export default function ProductsSection() {
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
       >
-        <span className="products__tag">FEATURED PRODUCTS</span>
+        <span className="products__tag">FROZEN MEAT EXPORT</span>
           <h2 className="products__title">
-            Ryeco Foods
+            Frozen Meat Export to Africa
             <span className="products__title-accent"></span>
           </h2>
         <motion.div
@@ -77,7 +80,7 @@ export default function ProductsSection() {
           transition={{ duration: 0.6, delay: 0.4, ease: cineEase }}
         />
         <p className="products__intro">
-          Ryeco Foods are producers and exporters of high-quality Salted Pig Feet in Brine specifically made for hot climates without the need to refrigerate.
+          Ryeco Foods exports a full range of frozen meats to Africa — including frozen pig feet, pig tail, pork spareribs, beef, mutton, chicken quarters, chicken legs, frozen beef feet, beef sinews, offal meat, chicken gizzards, chicken liver, beef liver, turkey legs, whole turkey, whole chicken, beef neck, and sausages.
         </p>
       </motion.div>
 
@@ -100,6 +103,8 @@ export default function ProductsSection() {
                 loading="lazy"
               />
               <div className="products__card-image-overlay" />
+              <span className="products__card-badge">{product.badge}</span>
+              <span className="products__card-number">{product.number}</span>
             </div>
 
             {/* Content */}

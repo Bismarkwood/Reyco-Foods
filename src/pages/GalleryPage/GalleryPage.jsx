@@ -32,22 +32,13 @@ const lookbookSpreads = [
     label: "No. 01",
     headline: "Curing Tradition",
     subtext: "Zillana Salted Pig Feet in Brine",
-    url: "/Zilla Salted Pig Feet in Brine.png",
+    url: "/Zillana Salted.jpg",
     caption: "Green-top barrels packed with our proprietary brine formula — lasting 18 months in hot climates without refrigeration.",
     size: "hero",
   },
   {
     id: 2,
     label: "No. 02",
-    headline: "The Warehouse",
-    subtext: "Quality Inspection",
-    url: "/Sourced with Care.png",
-    caption: "Our warehouse facility where every barrel is inspected before export.",
-    size: "tall",
-  },
-  {
-    id: 3,
-    label: "No. 03",
     headline: "Built for Export",
     subtext: "Loading & Logistics",
     url: "/Built for Export.png",
@@ -55,8 +46,8 @@ const lookbookSpreads = [
     size: "wide",
   },
   {
-    id: 4,
-    label: "No. 04",
+    id: 3,
+    label: "No. 03",
     headline: "Market Day",
     subtext: "African Market Trade",
     url: "/Gallery Images/Market_woman.jpeg",
@@ -64,17 +55,8 @@ const lookbookSpreads = [
     size: "portrait",
   },
   {
-    id: 5,
-    label: "No. 05",
-    headline: "Barrel Trade",
-    subtext: "Brine Curing Process",
-    url: "/Salted Pig Feet.png",
-    caption: "Salted pig feet sealed in barrels ready for export.",
-    size: "portrait",
-  },
-  {
-    id: 6,
-    label: "No. 06",
+    id: 4,
+    label: "No. 04",
     headline: "Trusted Partners",
     subtext: "Supply Network",
     url: "/Trusted Partners.png",
@@ -82,22 +64,31 @@ const lookbookSpreads = [
     size: "wide",
   },
   {
-    id: 7,
-    label: "No. 07",
-    headline: "Sourced with Care",
-    subtext: "Barrel Sealing",
-    url: "/Sourced with Care.png",
-    caption: "Every product carefully selected and quality-checked before export.",
-    size: "square",
-  },
-  {
-    id: 8,
-    label: "No. 08",
+    id: 5,
+    label: "No. 05",
     headline: "The Process",
     subtext: "Brine Preparation",
     url: "/Gallery Images/The Process.png",
     caption: "Our signature brine curing process in action.",
     size: "portrait",
+  },
+  {
+    id: 6,
+    label: "No. 06",
+    headline: "Fresh Quality",
+    subtext: "Recent Highlights",
+    url: "/Gallery Images/Screenshot 2026-08-23 074410.png",
+    caption: "Showcasing our top quality products fresh from the facility.",
+    size: "wide",
+  },
+  {
+    id: 7,
+    label: "No. 07",
+    headline: "Premium Selection",
+    subtext: "Ready for Export",
+    url: "/Gallery Images/Screenshot 2026-08-23 074454.png",
+    caption: "Carefully selected and packed to maintain the highest standards.",
+    size: "wide",
   },
 ];
 
@@ -111,6 +102,8 @@ const marqueeImages = [
   "/Gallery Images/The Process.png",
   "/Gallery Images/No. 05 Barrel Trade.png",
   "/Gallery Images/Market_woman.jpeg",
+  "/Gallery Images/Screenshot 2026-08-23 074410.png",
+  "/Gallery Images/Screenshot 2026-08-23 074454.png",
 ];
 
 export default function GalleryPage({ openContactModal }) {
@@ -165,7 +158,7 @@ export default function GalleryPage({ openContactModal }) {
       <section className="lb-hero" ref={heroRef}>
         <motion.div
           className="lb-hero__bg"
-          style={{ backgroundImage: "url('/Zilla Salted Pig Feet in Brine.png')" }}
+          style={{ backgroundImage: "url('/Zillana Salted.jpg')" }}
           initial={{ scale: 1.12, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 2, ease: cineEase }}
@@ -251,12 +244,12 @@ export default function GalleryPage({ openContactModal }) {
           ))}
         </div>
 
-        {/* --- SPREAD 4+5+6: Trio row --- */}
-        <div className="lb-row lb-row--3col">
-          {[lookbookSpreads[3], lookbookSpreads[4], lookbookSpreads[5]].map((item, i) => (
+        {/* --- SPREAD 4+5: Side-by-side --- */}
+        <div className="lb-row lb-row--2col">
+          {[lookbookSpreads[3], lookbookSpreads[4]].map((item, i) => (
             <motion.div
               key={item.id}
-              className="lb-spread lb-spread--third"
+              className="lb-spread lb-spread--half"
               variants={fadeUp(0.1 + i * 0.1)}
               initial="hidden"
               animate={editorialInView ? "visible" : "hidden"}
@@ -267,16 +260,16 @@ export default function GalleryPage({ openContactModal }) {
           ))}
         </div>
 
-        {/* --- SPREAD 7+8: Final pair --- */}
+        {/* --- SPREAD 6+7: Final pair --- */}
         <div className="lb-row lb-row--asymmetric">
           <motion.div
             className="lb-spread lb-spread--wide"
             variants={fadeUp(0.1)}
             initial="hidden"
             animate={editorialInView ? "visible" : "hidden"}
-            onClick={() => setLightboxIndex(6)}
+            onClick={() => setLightboxIndex(5)}
           >
-            <img src={lookbookSpreads[6].url} alt={lookbookSpreads[6].headline} />
+            <img src={lookbookSpreads[5].url} alt={lookbookSpreads[5].headline} />
           </motion.div>
 
           <motion.div
@@ -284,11 +277,12 @@ export default function GalleryPage({ openContactModal }) {
             variants={fadeUp(0.22)}
             initial="hidden"
             animate={editorialInView ? "visible" : "hidden"}
-            onClick={() => setLightboxIndex(7)}
+            onClick={() => setLightboxIndex(6)}
           >
-            <img src={lookbookSpreads[7].url} alt={lookbookSpreads[7].headline} />
+            <img src={lookbookSpreads[6].url} alt={lookbookSpreads[6].headline} />
           </motion.div>
         </div>
+
       </section>
 
       {/* ── 3. EDITORIAL STORY BLOCK ── */}

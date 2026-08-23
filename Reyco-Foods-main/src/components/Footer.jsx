@@ -23,7 +23,7 @@ const fadeIn = (delay = 0) => ({
   },
 });
 
-const exportMarkets = ["Ghana", "Liberia", "Sierra Leone", "Côte d'Ivoire", "Caribbean Islands"];
+const exportMarkets = ["Ghana", "Liberia", "Sierra Leone", "Caribbean Islands"];
 
 const linkColumns = [
   {
@@ -39,9 +39,11 @@ const linkColumns = [
   {
     title: "Export Products",
     links: [
-      { label: "Salted Pigfeet", href: "/#products" },
-      { label: "Salted Pigtails", href: "/#products" },
-      { label: "Salted Beef", href: "/#products" },
+      { label: "Frozen Pork Cuts", href: "/#products" },
+      { label: "Frozen Beef & Mutton", href: "/#products" },
+      { label: "Frozen Chicken", href: "/#products" },
+      { label: "Offal Meats", href: "/#products" },
+      { label: "Salted Pig Feet in Brine", href: "/#products" },
     ],
   },
 ];
@@ -87,13 +89,13 @@ export default function Footer() {
               {/* Brand label */}
               <div className="footer__brand-label">
                 <img src="/logo.png" alt="Ryeco Foods" className="footer__mini-logo" />
-                <span className="footer__brand-tag">BRINE MEAT EXPORT — UK &amp; AFRICA</span>
+                <span className="footer__brand-tag">FROZEN MEAT EXPORT — UK &amp; AFRICA</span>
               </div>
 
-              <h3 className="footer__cta-heading">Ready to trade with Ryeco?</h3>
+              <h3 className="footer__cta-heading">Ready to trade with Africa?</h3>
               <p className="footer__cta-sub">
-                Ryeco Foods export premium Salted meat to Ghana, Liberia,
-                Sierra Leone, Ivory Coast and the Caribbean Islands.
+                Ryeco Foods exports premium frozen meat and offal to Ghana, Liberia,
+                Sierra Leone, and the Caribbean Islands.
               </p>
 
               {/* Export markets */}
@@ -161,7 +163,7 @@ export default function Footer() {
                 <ul className="footer__col-list footer__col-list--contact">
                   <li>
                     <span className="footer__contact-label">Address</span>
-                    <span className="footer__contact-val">Unit 30 Vastre Industrial Estate, SY16 1DZ, Newtown, Powys, Wales</span>
+                    <span className="footer__contact-val">128 City Road, London EC1V 2NX</span>
                   </li>
                   <li>
                     <span className="footer__contact-label">Phone</span>
@@ -207,15 +209,15 @@ export default function Footer() {
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
           >
-            <span className="footer__badge">BRINE MEAT EXPORT TO AFRICA</span>
+            <span className="footer__badge">FROZEN MEAT EXPORT TO AFRICA</span>
           </motion.div>
 
           {/* Subtle category ticker */}
           <div className="footer__ticker">
             <div className="footer__ticker-track">
-              <span className="footer__ticker-item">Brine Pig Feet</span>
+              <span className="footer__ticker-item">Frozen Pig Feet</span>
               <span className="footer__ticker-sep">·</span>
-              <span className="footer__ticker-item">Brine Pork Spareribs</span>
+              <span className="footer__ticker-item">Frozen Pork Spareribs</span>
               <span className="footer__ticker-sep">·</span>
               <span className="footer__ticker-item">Beef &amp; Mutton</span>
               <span className="footer__ticker-sep">·</span>
@@ -235,9 +237,9 @@ export default function Footer() {
               <span className="footer__ticker-sep">·</span>
               <span className="footer__ticker-item">Sausages</span>
               <span className="footer__ticker-sep">·</span>
-              <span className="footer__ticker-item">Brine Pig Feet</span>
+              <span className="footer__ticker-item">Frozen Pig Feet</span>
               <span className="footer__ticker-sep">·</span>
-              <span className="footer__ticker-item">Brine Pork Spareribs</span>
+              <span className="footer__ticker-item">Frozen Pork Spareribs</span>
               <span className="footer__ticker-sep">·</span>
               <span className="footer__ticker-item">Beef &amp; Mutton</span>
               <span className="footer__ticker-sep">·</span>
@@ -272,10 +274,10 @@ export default function Footer() {
             animate={isInView ? "visible" : "hidden"}
           >
             <span className="footer__copyright">
-              © {new Date().getFullYear()} Ryeco Foods. All rights reserved.
+              © 2026 Ryeco Foods Ltd. All rights reserved.
             </span>
             <span className="footer__bottom-tag">
-              Brine Meat &amp; Offal Export — Wales, UK
+              Frozen Meat &amp; Offal Export — London, UK
             </span>
             <div className="footer__bottom-links">
               <a href="#" className="footer__bottom-link">Privacy Policy</a>

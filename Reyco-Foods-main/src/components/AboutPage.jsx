@@ -1,8 +1,8 @@
-// src/pages/AboutPage/AboutPage.jsx
+// src/components/AboutPage.jsx
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import NavBar from "../../components/NavBar/NavBar";
-import Footer from "../../components/Footer/Footer";
+import NavBar from "./NavBar";
+import Footer from "./Footer";
 import "./AboutPage.css";
 
 const cineEase = [0.25, 0.46, 0.45, 0.94];
@@ -44,8 +44,8 @@ const differentiators = [
     ),
   },
   {
-    title: "Full Brine Meat Range",
-    text: "Beyond Salted Pig Feet, we export Pig Tails and Salted Beef to meet diverse market demands.",
+    title: "Full Frozen Meat Range",
+    text: "Beyond Salted Pig Feet, we export a comprehensive frozen meat portfolio — beef, mutton, pork, poultry, offal and sausages — to meet diverse African market demands.",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
@@ -59,7 +59,6 @@ const exportCountries = [
   { name: "Liberia", region: "West Africa", flag: "🇱🇷" },
   { name: "Sierra Leone", region: "West Africa", flag: "🇸🇱" },
   { name: "Caribbean Islands", region: "Caribbean", flag: "🏝️" },
-  { name: "Côte d'Ivoire", region: "West Africa", flag: "🇨🇮" },
 ];
 
 const certifications = [
@@ -132,7 +131,7 @@ export default function AboutPage() {
           >
             <div className="about-hero__tag">
               <span className="about-hero__tag-dot" />
-              Established 2022 · Wales, UK
+              Established 2022 · London, UK
             </div>
             <h1 className="about-hero__title">
               Producers &amp;<br />
@@ -141,7 +140,7 @@ export default function AboutPage() {
             </h1>
             <p className="about-hero__sub">
               Ryeco Foods UK Ltd — bringing premium Salted Pig Feet in Brine and
-              brine meat products from the United Kingdom to West Africa and the Caribbean.
+              frozen meat products from the United Kingdom to West Africa and the Caribbean.
             </p>
 
 
@@ -178,7 +177,11 @@ export default function AboutPage() {
                 Pig Feet can last up to 18 months without the need to freeze — making it
                 the ideal product for markets across West Africa and the Caribbean.
               </p>
-
+              <p>
+                Building on our success with Salted Pig Feet, we have expanded our
+                portfolio to include the export of frozen meat cuts — bringing a full range
+                of high-quality frozen beef, pork, poultry, and offal products to Africa.
+              </p>
             </motion.div>
 
             <motion.div
@@ -188,13 +191,13 @@ export default function AboutPage() {
               animate={storyInView ? "visible" : "hidden"}
             >
               <img
-                src="/Quality You Can Trust.png"
-                alt="Warehouse with barrels of salted pig feet"
+                src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=85"
+                alt="Premium meat products prepared for export"
                 className="story-img"
               />
               <div className="story-img-badge">
                 <div className="story-img-badge__num">2022</div>
-                <div className="story-img-badge__label">Est. Wales, UK</div>
+                <div className="story-img-badge__label">Est. London, UK</div>
               </div>
             </motion.div>
           </div>
@@ -239,13 +242,13 @@ export default function AboutPage() {
             animate={diffInView ? "visible" : "hidden"}
           >
             <img
-              src="/Salted Pig Feet.png"
-              alt="Salted pig feet product"
+              src="/carousel_frozen_pork_cuts.png"
+              alt="Frozen pork cuts prepared for export"
               className="different-img"
             />
             <img
-              src="/Salted Pigtail.png"
-              alt="Salted pigtail product"
+              src="/ryeco_warehouse_1780437790543.png"
+              alt="Ryeco Foods cold store warehouse"
               className="different-img"
             />
           </motion.div>
@@ -276,7 +279,7 @@ export default function AboutPage() {
               Where We <em>Ship</em> To
             </h2>
             <p className="countries-subtitle">
-              From the United Kingdom, Ryeco Foods supplies export-ready brine meat,
+              From the United Kingdom, Ryeco Foods supplies export-ready frozen meat,
               offal, and Salted Pig Feet in Brine to African trade partners and island markets.
             </p>
           </motion.div>
@@ -289,16 +292,16 @@ export default function AboutPage() {
                 region: "West Africa",
                 code: "GH",
                 flag: "🇬🇭",
-                img: "/ghana_arch.png",
+                img: "/carousel_salted_pig_brine.png",
                 color: "#1f6b3b",
-                desc: "A key market for Salted Pig Feet in Brine and brine meat supply built for hot-climate distribution.",
+                desc: "A key market for Salted Pig Feet in Brine and frozen meat supply built for hot-climate distribution.",
               },
               {
                 name: "Liberia",
                 region: "West Africa",
                 code: "LR",
                 flag: "🇱🇷",
-                img: "/liberia_flag.jpg",
+                img: "/carousel_frozen_export_logistics.png",
                 color: "#e36a2e",
                 desc: "Reliable cold-chain exports for Liberian importers, wholesalers, and food service buyers.",
               },
@@ -307,28 +310,18 @@ export default function AboutPage() {
                 region: "West Africa",
                 code: "SL",
                 flag: "🇸🇱",
-                img: "/sierraleone_city.jpg",
+                img: "/frozen_beef_chicken.png",
                 color: "#1f6b3b",
                 desc: "Export-grade beef, poultry, pork, and offal products prepared for Sierra Leone's growing food trade.",
-              },
-              {
-                name: "Côte d'Ivoire",
-                region: "West Africa",
-                code: "CI",
-                flag: "🇨🇮",
-                img: "/cote_divoire_market.jpg",
-                color: "#E36A2E",
-                displayDesc: "Emerging market with demand for premium brined pork products.",
-                desc: "Growing consumer base for high-quality salted pig feet and brine meats.",
               },
               {
                 name: "Caribbean Islands",
                 region: "Caribbean",
                 code: "CI",
                 flag: "🏝️",
-                img: "/caribbean_island.png",
+                img: "/frozen_offal_turkey.png",
                 color: "#E36A2E",
-                displayDesc: "Brine poultry, turkey, offal, and brined products suitable for tropical market needs.",
+                displayDesc: "Frozen poultry, turkey, offal, and brined products suitable for tropical market needs.",
                 desc: "Salted Pig Feet in Brine — engineered for tropical climates.",
               },
             ].map((c, i) => (
@@ -406,6 +399,16 @@ export default function AboutPage() {
                 <div className="cert-icon">{cert.icon}</div>
                 <h3 className="cert-card__title">{cert.title}</h3>
                 <p className="cert-card__text">{cert.text}</p>
+                
+                <div style={{ marginTop: "auto" }}>
+                  <div className="cert-status">
+                    <span className="cert-status__dot" />
+                    {cert.status}
+                  </div>
+                  <div style={{ marginTop: "12px", fontSize: "0.82rem", color: "#888", fontWeight: "600", textTransform: "uppercase", letterSpacing: "0.08em" }}>
+                    {cert.stage}
+                  </div>
+                </div>
               </motion.div>
             ))}
           </div>

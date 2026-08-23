@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import "./HeroSection.css";
 
 const heroImages = [
-  "/Zilla Salted Pig Feet in Brine.png",
+  "/Zillana Salted.jpg",
   "/Quality You Can Trust.png",
   "/Built for Export.png",
   "/Trusted Partners.png",
@@ -92,7 +92,7 @@ export default function HeroSection({ openContactModal }) {
             Producers Of Salted Pig Feet.
           </h1>
           <p className="hero__text">
-            Ryeco Foods are producers and exporters of high-quality Salted Pig Feet in Brine specifically made for hot climate without the need to refrigerate. Our Salted Pig Feet in strong brine with green-top lid has a longer shelf life of up to 18 months.
+            Ryeco Foods are producers and exporters of high-quality Salted Pig Feet in Brine specifically made for hot climate without the need to refrigerate.
           </p>
 
           <div className="hero__actions">
