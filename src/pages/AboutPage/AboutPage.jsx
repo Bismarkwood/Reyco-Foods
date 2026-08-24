@@ -239,12 +239,12 @@ export default function AboutPage() {
             animate={diffInView ? "visible" : "hidden"}
           >
             <img
-              src="/Salted Pig Feet.png"
+              src="/Salted Pig Feet (2).png"
               alt="Salted pig feet product"
               className="different-img"
             />
             <img
-              src="/Salted Pigtail.png"
+              src="/Salted_Pigtail_New.png"
               alt="Salted pigtail product"
               className="different-img"
             />
