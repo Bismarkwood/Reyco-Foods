@@ -140,8 +140,7 @@ export default function AboutPage() {
               of Quality Meat
             </h1>
             <p className="about-hero__sub">
-              Ryeco Foods UK Ltd — bringing premium Salted Pig Feet in Brine and
-              brine meat products from the United Kingdom to West Africa and the Caribbean.
+              Ryeco Foods UK Ltd — manufacturers and exporters of salted pig feet preserved in strong brine.
             </p>
 
 

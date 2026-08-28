@@ -190,7 +190,7 @@ export default function GalleryPage({ openContactModal }) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.75, ease: cineEase }}
           >
-            An editorial journey through Ryeco Foods — from the curing barrel to the cold store, and the UK dock to West Africa.
+            An editorial journey through Ryeco Foods , from traditional curing and careful preparation to export from the UK to West Africa.
           </motion.p>
 
           <motion.div

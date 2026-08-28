@@ -37,7 +37,7 @@ const products = [
     title: "Zillana Salted Pig Feet in Brine",
     subtitle: "",
     description:
-      "Our flagship product Zillana is specifically formulated for hot climates. No refrigeration needed.",
+      "Our flagship product Zillana pig gets in strong brine, specifically formulated for hot climates. No refrigeration needed.",
     highlights: ["No Refrigeration Required", "18 Month Shelf Life", "Hot-Climate Formula", "Export Ready"],
     image: "/Zillana Salted.jpg",
     caption: "Zillana Green-Top · Premium Brine Formula",
@@ -167,7 +167,7 @@ export default function ServicesSection() {
         animate={isInView ? "visible" : "hidden"}
       >
         <span className="services__tag">BRINE MEAT EXPORT</span>
-        <h2 className="services__title">Brine Meat Export to Africa & Beyond</h2>
+        <h2 className="services__title">Brined Meat Export to Africa & Beyond</h2>
         <motion.div
           className="services__title-line"
           initial={{ scaleX: 0 }}
